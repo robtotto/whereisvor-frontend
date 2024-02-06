@@ -26,6 +26,11 @@ if ('geolocation' in navigator) {
   navigator.geolocation.getCurrentPosition(position => {
     const [lng, lat] = [position.coords.longitude, position.coords.latitude];
     map.setCenter([lng, lat]);
+    const userMarker = new mapboxgl.Marker({
+      color: 'red',
+    })
+      .setLngLat([lng, lat])
+      .addTo(map);
   });
 } else {
   alert('Geolocation is not supported by your browser');
