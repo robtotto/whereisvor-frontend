@@ -18,7 +18,9 @@ const map = new mapboxgl.Map({
 
 // Add markers to map
 coords.map(coord => {
-  const marker = new mapboxgl.Marker().setLngLat([coord[0], coord[1]]).addTo(map);
+  const popup = new mapboxgl.Popup({ offset: 35 }).setText('Acesta e un popup');
+  2;
+  const marker = new mapboxgl.Marker().setLngLat([coord[0], coord[1]]).setPopup(popup).addTo(map);
 });
 
 // Check geolocation and set map center if ok
@@ -30,6 +32,7 @@ if ('geolocation' in navigator) {
       color: 'red',
     })
       .setLngLat([lng, lat])
+      .setPopup(new mapboxgl.Popup({ offset: 35 }).setText('Aici te afli tu'))
       .addTo(map);
   });
 } else {
