@@ -57,7 +57,7 @@ map.on('load', () => {
     filter: ['in', '$type', 'LineString']
   });
 
-  // Adăugarea marcatorilor pentru fiecare element din coords
+  // Add markers
   coords.forEach(coord => {
     const marker = new mapboxgl.Marker()
       .setLngLat(coord)
