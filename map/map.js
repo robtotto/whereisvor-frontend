@@ -40,7 +40,7 @@ if (navigator.geolocation) {
 
       // Add water spring markers info:
       coords.map(coord => {
-        getDistanceToWaterSpring(lng, lat, coord[0], coord[1]);
+        getDistanceToWaterSpring(lng, lat, coord);
       });
     },
     error => alert('No coordinates available!')
@@ -55,10 +55,10 @@ coords.map(coord => {
 });
 /////////////////////////////////////////////////////////////////////
 // Helper functions:
-async function getDistanceToWaterSpring(userLng, userLat, targetLng, targetLat) {
+async function getDistanceToWaterSpring(userLng, userLat, targetCoords) {
   // get distance
   const response = await fetch(
-    `https://api.mapbox.com/directions/v5/mapbox/walking/${userLng},${userLat};${targetLng},${targetLat}?alternatives=false&geometries=geojson&overview=simplified&steps=false&access_token=pk.eyJ1IjoiYm9nZGFuLTI4IiwiYSI6ImNsczNobDdicDB5cWcydm1lOGtnMXZjYWkifQ.UI-Umu7Pb1hHE2ZsQ7DYBQ`
+    `https://api.mapbox.com/directions/v5/mapbox/walking/${userLng},${userLat};${targetCoords[0]},${targetCoords[1]}?alternatives=false&geometries=geojson&overview=simplified&steps=false&access_token=pk.eyJ1IjoiYm9nZGFuLTI4IiwiYSI6ImNsczNobDdicDB5cWcydm1lOGtnMXZjYWkifQ.UI-Umu7Pb1hHE2ZsQ7DYBQ`
   );
 
   const data = await response.json();
@@ -67,5 +67,5 @@ async function getDistanceToWaterSpring(userLng, userLat, targetLng, targetLat) 
   // update marker and popup
   const popup = new mapboxgl.Popup({ offset: 35 }).setText(`La ${distance} km departare`);
   2;
-  const marker = new mapboxgl.Marker().setLngLat([targetLng, targetLat]).setPopup(popup).addTo(map);
+  const marker = new mapboxgl.Marker().setLngLat(targetCoords).setPopup(popup).addTo(map);
 }
