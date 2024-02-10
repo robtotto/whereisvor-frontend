@@ -1,0 +1,14 @@
+@import "../bootstrap/scss/functions";
+
+$primary: #c03d19;
+
+.heading {
+    color: $primary;
+}
+
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/variables-dark";
+@import "../bootstrap/scss/maps";
+@import "../bootstrap/scss/mixins";
+@import "../bootstrap/scss/root";
+@import "../bootstrap/scss/bootstrap.scss";
