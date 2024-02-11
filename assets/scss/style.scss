@@ -1,4 +1,5 @@
 @import "../bootstrap/scss/functions";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
 $primary: #70B1FF;
 $secondary: #EFEFEF;
@@ -8,17 +9,12 @@ $success: #126704;
 $danger: #FF6161;
 $dark: #292929;
 
-$font-family-sans-serif: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-sans-serif: "Open Sans", sans-serif;
 
-.heading {
-    color: $success;
+:root {
+    font-family: $font-family-sans-serif;
 }
 
-.paragraf {
-    color: $danger;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import "../bootstrap/scss/variables";
 @import "../bootstrap/scss/variables-dark";
 @import "../bootstrap/scss/maps";
