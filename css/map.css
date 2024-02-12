@@ -1,0 +1,10 @@
+:root {
+  font-family: "Open Sans", sans-serif;
+}
+
+body .buttonList {
+  padding: 50px 30px 30px 50px;
+}
+body h6 {
+  border-bottom: 15px solid #70B1FF;
+}

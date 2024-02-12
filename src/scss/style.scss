@@ -1,22 +1,7 @@
 @import "../bootstrap/scss/functions";
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
-$primary: #70B1FF;
-$secondary: #EFEFEF;
-$secondary-emphasis: #D9D9D9;
-$light-emphasis: #D4D4D4;
-$success: #126704;
-$danger: #FF6161;
-$dark: #292929;
-
-$btn-dark: #292929;
-$btn-success: #126704;
-
-$font-family-sans-serif: "Open Sans", sans-serif;
-
-:root {
-    font-family: $font-family-sans-serif;
-}
+@import "variables"; 
 
 @import "../bootstrap/scss/variables";
 @import "../bootstrap/scss/variables-dark";

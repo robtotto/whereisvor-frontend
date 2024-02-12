@@ -1,0 +1,10 @@
+@import "variables";
+
+body {
+    .buttonList {
+        padding: 50px 30px 30px 50px;
+    }
+    h6 {
+        border-bottom: 15px solid $primary;
+    }
+}
