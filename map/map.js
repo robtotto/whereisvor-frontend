@@ -21,6 +21,12 @@ const map = new mapboxgl.Map({
   zoom: 14, // starting zoom
 });
 
+// Add controls for zoom & rotation
+map.addControl(new mapboxgl.NavigationControl());
+
+// Add scale
+map.addControl(new mapboxgl.ScaleControl());
+
 //
 // Check geolocation and set map center with new coords if allowed
 if (navigator.geolocation) {
