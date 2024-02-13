@@ -14,6 +14,13 @@ const map = new mapboxgl.Map({
   zoom: 14,
 });
 
+// Add controls for zoom & rotation
+map.addControl(new mapboxgl.NavigationControl());
+  
+// Add scale
+map.addControl(new mapboxgl.ScaleControl());
+
+
 const distanceContainer = document.getElementById('distance');
 const geojson = {
   type: 'FeatureCollection',
