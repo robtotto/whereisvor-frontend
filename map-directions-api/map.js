@@ -7,6 +7,12 @@ const map = new mapboxgl.Map({
   zoom: 14,
 });
 
+// Add controls for zoom & rotation
+map.addControl(new mapboxgl.NavigationControl());
+
+// Add scale
+map.addControl(new mapboxgl.ScaleControl());
+
 // sort coordonates
 function sortCoordsByDistance(userLng, userLat) {
   const izvoareCoordonate = {
@@ -16,6 +22,7 @@ function sortCoordsByDistance(userLng, userLat) {
     'Izvor 4': [25.6308023058968, 45.636798899522084],
     'Izvor 5': [25.635158213405624, 45.632327738633],
     'Izvor 6': [25.58942464128678, 45.64276925678877],
+    'Izvor 7': [25.61740278132686, 45.64954956999111]
   };
 
   const coordonate = Object.values(izvoareCoordonate);
@@ -67,7 +74,7 @@ if ('geolocation' in navigator) {
       .setPopup(new mapboxgl.Popup({ offset: 35 }).setText('Aici te afli tu'))
       .addTo(map);
 
-    //
+  
     sortCoordsByDistance(lng, lat);
   });
 } else {
