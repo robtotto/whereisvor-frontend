@@ -56,8 +56,8 @@ if (navigator.geolocation) {
 
 // Add default markers on the map without geolocation:
 coords.map(coord => {
-  const popup = new mapboxgl.Popup({ offset: 35 }).setText('Acesta e un popup');
-  2;
+  const popup = new mapboxgl.Popup({ offset: 35, maxWidth: '300px' }).setHTML(popupHtml);
+
   const marker = new mapboxgl.Marker({ color: '#FF6161' })
     .setLngLat([coord[0], coord[1]])
     .setPopup(popup)
