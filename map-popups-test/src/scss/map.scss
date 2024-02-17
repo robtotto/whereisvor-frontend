@@ -1,0 +1,78 @@
+@import "variables";
+
+
+body {
+    background-color: $secondary;
+    font-family: $font-family-sans-serif !important;
+}
+
+.map-parent {
+    position: relative;
+}
+
+.button-list {
+    top: 24px;
+}
+
+.button-list:hover {
+    background-color: $success;
+}
+
+.map-resposive {
+    overflow: hidden;
+    padding-bottom: 40%;
+    position: relative;
+    height: 0;
+    border: solid 2px $danger;
+}
+
+@media (max-width: 767.98px) {                      // Small devices - landscape phones, less than 768px
+    .map-resposive {    
+    padding-bottom: 140% !important; 
+    }
+}
+
+@media (max-width: 991.98px) {                      // Medium devices - tablets, less than 992px
+    .map-resposive {    
+        padding-bottom: 110%; 
+    }
+}
+
+.map-resposive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border: 0;
+}
+
+.card-details {
+    border-radius: 25px;
+    position: absolute;
+    z-index: 2;
+    width: 500px;
+    max-width: calc(100% - 24px);
+    bottom: 24px;
+}
+
+.card-title {
+    color: #212121;
+}
+
+.card-text-km {
+    color: #7F7F7F;
+}
+
+.heart-card {
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
+
+.img-spring-card {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
