@@ -156,7 +156,7 @@ if (navigator.geolocation) {
         color: 'green',
       })
         .setLngLat([lng, lat])
-        .setPopup(new mapboxgl.Popup({ offset: 35, closeButton: false }).setText('Aici te afli tu'))
+        .setPopup(new mapboxgl.Popup({ offset: 35 }).setText('Aici te afli tu'))
         .addTo(map);
 
       // Source markers info:
