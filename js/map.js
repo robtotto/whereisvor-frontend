@@ -1,3 +1,7 @@
+// Element selectors:
+const toggleButton = document.querySelector('#buttonList');
+const mapContainer = document.querySelector('#map');
+
 // Dummy water spring data:
 const coords = [
   [25.619098, 45.648387],
@@ -56,7 +60,9 @@ if (navigator.geolocation) {
 
 // Add default markers on the map without geolocation:
 coords.map(coord => {
-  const popup = new mapboxgl.Popup({ offset: 35, maxWidth: '300px' }).setHTML(popupHtml);
+  const popup = new mapboxgl.Popup({
+    offset: 35,
+  }).setText('TBD');
 
   const marker = new mapboxgl.Marker({ color: '#FF6161' })
     .setLngLat([coord[0], coord[1]])
@@ -74,9 +80,35 @@ async function getDistanceToWaterSpring(userLng, userLat, targetCoords) {
   const data = await response.json();
   const distance = (data.routes[0].distance / 1000).toFixed(2); //km
 
+  // Custom popup:
+  const popupHTML = `
+<div class="overflow-hidden card">
+      <div class="row g-0">
+      <div class="col-4">
+        <img src="Images/spring.png" class="img-spring-card" id="imgSpringCard" alt="" />
+      </div>
+      <div class="col-8">
+        <div class="card-body">
+          <h4 class="card-title">Nume Izvor, Locație</h4>
+          <p class="card-text-km">${distance} km</p>
+          <p class="card-text">
+            <img
+              src="Images/heart-symbol.svg"
+              class="position-absolute bottom-0 end-0 heart-card"
+              id="heartCard"
+              alt="heart-symbol" />
+          </p>
+        </div>
+      </div>
+    </div>
+</div>
+    
+`;
+
   // update marker and popup
-  const popup = new mapboxgl.Popup({ offset: 35 }).setText(`La ${distance} km departare`);
-  2;
+  const popup = new mapboxgl.Popup({ offset: 35, closeButton: false }).setHTML(popupHTML);
+  //   const popup = new mapboxgl.Popup({ offset: 35 }).setText(`La ${distance} km departare`);
+
   const marker = new mapboxgl.Marker({ color: '#FF6161' })
     .setLngLat(targetCoords)
     .setPopup(popup)
@@ -84,12 +116,10 @@ async function getDistanceToWaterSpring(userLng, userLat, targetCoords) {
 }
 
 // Toggle map / list
-const btn = document.querySelector('#buttonList');
-const mapContainer = document.querySelector('#map');
 
 let isMapVisible = true;
 
-btn.addEventListener('click', function () {
+toggleButton.addEventListener('click', function () {
   isMapVisible = !isMapVisible;
 
   mapContainer.style.display = isMapVisible ? 'none' : 'block';

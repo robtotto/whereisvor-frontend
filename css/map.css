@@ -1,10 +1,10 @@
 :root {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 body {
-  background-color: #EFEFEF;
-  font-family: "Open Sans", sans-serif !important;
+  background-color: #efefef;
+  font-family: 'Open Sans', sans-serif !important;
 }
 
 .map-parent {
@@ -24,7 +24,7 @@ body {
   padding-bottom: 40%;
   position: relative;
   height: 0;
-  border: solid 2px #FF6161;
+  border: solid 2px #ff6161;
 }
 
 @media (max-width: 767.98px) {
@@ -60,7 +60,7 @@ body {
 }
 
 .card-text-km {
-  color: #7F7F7F;
+  color: #7f7f7f;
 }
 
 .heart-card {
@@ -74,5 +74,10 @@ body {
   height: 100%;
   max-height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
+}
+
+/* Added by Bogdan M */
+.mapboxgl-popup-content {
+  width: 300px;
 }
