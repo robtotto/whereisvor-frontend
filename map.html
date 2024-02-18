@@ -40,7 +40,7 @@
                                 <a class="nav-link active" aria-current="page" href="#">Acasă</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Listă Izvoare</a>
+                                <a class="nav-link" href="lista-izvoare.html">Listă Izvoare</a>
                             </li>
                         </ul>
 
@@ -50,7 +50,7 @@
 
                         <ul class="navbar-nav nav-menu-right gap-lg-5">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Hartă</a>
+                                <a class="nav-link" href="map.html">Hartă</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Contact</a>
@@ -64,7 +64,8 @@
 
             <!--Map-->
             <div class="map-parent">
-                <button type="button" class="btn rounded-pill btn-dark z-1 position-absolute start-50 translate-middle-x button-list" id="buttonList"><b>Vezi lista</b> <img src="Images/list-symbol.svg" alt="list-symbol"></button>
+                
+                <a class="btn rounded-pill btn-dark z-1 position-absolute start-50 translate-middle-x button-list" id="buttonList" href="lista-izvoare.html" role="button"><b>Vezi lista</b> <img src="Images/list-symbol.svg" alt="list-symbol"></a>
 
                 <div class="map-resposive map" id="map">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d87178.71452278309!2d26.29210352139449!3d46.935458010139804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47355449968fa865%3A0x52d3dedb49e2d0b8!2sPiatra%20Neam%C8%9B!5e0!3m2!1sro!2sro!4v1707913815848!5m2!1sro!2sro" width="300" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -78,9 +79,10 @@
                         </div>
                         <div class="col-8">
                             <div class="card-body">
-                            <h4 class="card-title">Nume Izvor, Locație</h4>
+                            <h4 class="card-title"><b>Nume Izvor</b></h4>
+                            <p class="card-text">Locatie:</p>
                             <p class="card-text-km">123 Km</p>
-                            <p class="card-text"><img src="Images/heart-symbol.svg" class="position-absolute bottom-0 end-0 heart-card" id="heartCard" alt="heart-symbol"></p>
+                            <img src="Images/heart-symbol.svg" class="position-absolute bottom-0 end-0 heart-card" id="heartCard" alt="heart-symbol">
                             </div>
                         </div>
                         </div>

@@ -55,17 +55,25 @@ body {
   bottom: 24px;
 }
 
-.card-title {
+.card-text-km {
+  color: #7F7F7F;
+  margin-top: 2px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.card-title, .card-text {
   color: #212121;
 }
 
-.card-text-km {
-  color: #7F7F7F;
+.card-text, .card-text-km {
+  padding-right: 17%;
 }
 
 .heart-card {
-  margin-bottom: 15px;
-  margin-right: 15px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  scale: 1.5;
 }
 
 .img-spring-card {
