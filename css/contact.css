@@ -1,0 +1,136 @@
+:root {
+  font-family: "Open Sans", sans-serif;
+}
+
+.container__contact-form {
+  border-top-right-radius: 50px 50px;
+  border-bottom-right-radius: 50px 50px;
+  border-top-left-radius: 10px 10px;
+  border-bottom-left-radius: 10px 10px;
+  background-color: #D9D9D9;
+}
+
+.image__contact-form {
+  background-image: url("../Images/harta-contact.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  border-top-right-radius: 10px 10px;
+  border-bottom-right-radius: 10px 10px;
+}
+
+@media (max-width: 992px) {
+  .image__contact-form {
+    display: none;
+  }
+  .container__contact-form {
+    border-top-right-radius: 10px 10px;
+    border-bottom-right-radius: 10px 10px;
+  }
+}
+.carousel-GT {
+  border-radius: 10px;
+}
+
+.carousel-GT__image {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.slide-dots-GT {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(16px + 2rem);
+  margin: 0;
+  padding: 1rem 0;
+  list-style-type: none;
+}
+.slide-dots-GT li {
+  margin: 0 0.25rem;
+}
+.slide-dots-GT button {
+  display: block;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  transition: all 0.5s ease-in-out;
+  border: none;
+  border-radius: 100%;
+  background-color: #126704;
+  text-indent: -9999px;
+}
+.slide-dots-GT li.slick_arrow_GT button {
+  background-color: #126704;
+  transform: scale(2);
+}
+
+.slide-dots-GT li.slick-active button {
+  width: 16px;
+  height: 16px;
+  background-color: #126704;
+  border-radius: 100%;
+}
+
+.slick_arrow_GT {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 60px;
+  height: 60px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.slick_arrow_GT.prev {
+  left: -33px;
+}
+
+.slick_arrow_GT.next {
+  right: -33px;
+}
+
+.slick_arrow_GT:after {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 24px;
+}
+
+.slick_arrow_GT.prev:after {
+  border-left: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  transform: rotate(45deg);
+  left: 24px;
+}
+
+.slick_arrow_GT.next:after {
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  transform: rotate(-45deg);
+  right: 24px;
+}
+
+@media (max-width: 768px) {
+  .slick_arrow_GT {
+    top: calc(50% - 30px);
+    width: 40px;
+    height: 40px;
+    font-size: 50px;
+  }
+  .slick_arrow_GT.prev {
+    left: 5px;
+  }
+  .slick_arrow_GT.next {
+    right: 5px;
+  }
+}
+.team-link {
+  color: #0000EE;
+}

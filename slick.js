@@ -23,3 +23,19 @@ $(document).ready(function () {
                 ]
             });
         });
+
+
+$(document).ready(function(){
+    $('.carousel-GT').slick({
+        dots: true,
+        autoplay: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        cssEase: 'linear',
+        fade: true,
+        dotsClass: 'slide-dots-GT',
+        prevArrow: '<div class="prev slick_arrow_GT"></div>',
+        nextArrow: '<div class="next slick_arrow_GT"></div>',
+    });
+});
