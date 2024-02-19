@@ -1,0 +1,52 @@
+{
+  "izvoare": [
+    {
+      "id": 1,
+      "coordinate": [25.59350159864167, 45.64387187074832],
+      "image": "Images/spring.png",
+      "name": "Izvor 1",
+      "description": "Sed quis neque id lacus maximus aliquet.  Suspendisse potenti. Sed eleifend turpis nec ex eleifend faucibus. Aenean eget ante at quam tristique ullamcorper. ",
+      "likeCounter": 3
+    },
+    {
+      "id": 2,
+      "coordinate": [25.630898865420438, 45.636348798796504],
+      "image": "Images/spring.png",
+      "name": "Izvor 2",
+      "description": "Am intalnit un izvor fericit",
+      "likeCounter": 11
+    },
+    {
+      "id": 3,
+      "coordinate": [25.59286859736815, 45.64348933366974],
+      "image": "Images/spring.png",
+      "name": "Izvor 3",
+      "description": "Acesta este un izvor vesel si zglobiu.",
+      "likeCounter": 17
+    },
+    {
+      "id": 4,
+      "coordinate": [25.6308023058968, 45.636798899522084],
+      "image": "Images/spring.png",
+      "name": "Izvor 4",
+      "description": "Cras vestibulum nisi ac lorem faucibus, non feugiat justo consectetur.",
+      "likeCounter": 0
+    },
+    {
+      "id": 5,
+      "coordinate": [25.635158213405624, 45.632327738633],
+      "image": "Images/spring.png",
+      "name": "Izvor 5",
+      "description": "Vivamus quis bibendum tortor. Maecenas sit amet posuere odio.",
+      "likeCounter": 21
+    },
+    {
+      "id": 6,
+      "coordinate": [25.58942464128678, 45.64276925678877],
+      "image": "Images/spring.png",
+      "name": "Izvor 6",
+      "description": "Sed nec ipsum at eros consequat mollis. Nulla facilisi. Vivamus vel felis eget metus congue pellentesque.",
+      "likeCounter": 9
+    }
+  ]
+}

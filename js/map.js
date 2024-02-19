@@ -124,3 +124,11 @@ toggleButton.addEventListener('click', function () {
 
   mapContainer.style.display = isMapVisible ? 'none' : 'block';
 });
+
+////////////////// FAKE API SERVER ////////////////////////////////
+async function getSprings() {
+  const res = await fetch('http://localhost:8000/izvoare');
+  const data = await res.json();
+  console.log(data);
+}
+getSprings();
