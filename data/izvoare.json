@@ -2,7 +2,7 @@
   "izvoare": [
     {
       "id": 1,
-      "coordinate": [25.59350159864167, 45.64387187074832],
+      "coordinate": [25.619098, 45.648387],
       "image": "Images/spring.png",
       "name": "Izvor 1",
       "description": "Sed quis neque id lacus maximus aliquet.  Suspendisse potenti. Sed eleifend turpis nec ex eleifend faucibus. Aenean eget ante at quam tristique ullamcorper. ",
@@ -10,7 +10,7 @@
     },
     {
       "id": 2,
-      "coordinate": [25.630898865420438, 45.636348798796504],
+      "coordinate": [25.584508, 45.646107],
       "image": "Images/spring.png",
       "name": "Izvor 2",
       "description": "Am intalnit un izvor fericit",
@@ -18,7 +18,7 @@
     },
     {
       "id": 3,
-      "coordinate": [25.59286859736815, 45.64348933366974],
+      "coordinate": [25.63017, 45.664705],
       "image": "Images/spring.png",
       "name": "Izvor 3",
       "description": "Acesta este un izvor vesel si zglobiu.",
@@ -26,7 +26,7 @@
     },
     {
       "id": 4,
-      "coordinate": [25.6308023058968, 45.636798899522084],
+      "coordinate": [25.585881, 45.662066],
       "image": "Images/spring.png",
       "name": "Izvor 4",
       "description": "Cras vestibulum nisi ac lorem faucibus, non feugiat justo consectetur.",
@@ -34,7 +34,7 @@
     },
     {
       "id": 5,
-      "coordinate": [25.635158213405624, 45.632327738633],
+      "coordinate": [25.705594, 45.660288],
       "image": "Images/spring.png",
       "name": "Izvor 5",
       "description": "Vivamus quis bibendum tortor. Maecenas sit amet posuere odio.",
