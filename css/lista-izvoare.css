@@ -19,6 +19,7 @@ body {
 
 .button-map:hover {
   background-color: #126704;
+  border: #126704;
 }
 
 .grid-cards {
