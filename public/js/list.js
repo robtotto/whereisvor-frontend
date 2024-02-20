@@ -2,7 +2,7 @@
 
 import {getSprings } from './lib/utils.js';
 
-// fetching springs springs
+// fetching springs 
 const springs = await getSprings();
 // console.log(springs);
  
@@ -18,7 +18,6 @@ const springs = await getSprings();
         gridCards.appendChild(errorMessage);
     }
 
-// Funcție pentru a crea un card pentru fiecare element din listă
 function createCard(item) {
   const card = document.createElement('div');
   card.classList.add('overflow-hidden', 'border-secondary', 'card', 'card-details');
