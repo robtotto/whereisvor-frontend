@@ -1,333 +1,443 @@
 <!DOCTYPE html>
 <html lang="ro-RO">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Contact WhereIsVor</title>
-         <!-- Fisiere de CSS externe. Styles, Slick, etc. -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
-             integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
-             crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Contact WhereIsVor</title>
+    <!-- Fisiere de CSS externe. Styles, Slick, etc. -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+      integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous" />
 
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/contact.css">
-        <link rel="stylesheet" href="css/nav-bar.css">
-        <link rel="stylesheet" href="css/footer.css">
-    </head>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/nav-bar.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+  </head>
 
-    <body>
-        <!--Navbar-->
+  <body>
+    <!--Navbar-->
 
-        <!-- Aici incepe navbar-ul -->
+    <!-- Aici incepe navbar-ul -->
 
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand mx-lg-4 d-block d-lg-none" href="#">
+          <img src="Images/logo-navbar.svg" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-lg-center" id="navbarNav">
+          <ul class="navbar-nav nav-menu-left justify-content-lg-end gap-lg-5">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Acasă</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="lista-izvoare.html">Izvoare</a>
+            </li>
+          </ul>
 
-                    <a class="navbar-brand mx-lg-4 d-block d-lg-none" href="#">
-                        <img src="Images/logo-navbar.svg">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-lg-center" id="navbarNav">
-                        <ul class="navbar-nav nav-menu-left justify-content-lg-end gap-lg-5">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Acasă</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="lista-izvoare.html">Izvoare</a>
-                            </li>
-                        </ul>
+          <a class="navbar-brand mx-lg-4 d-none d-lg-block" href="#">
+            <img src="Images/logo-navbar.svg" />
+          </a>
 
-                        <a class="navbar-brand mx-lg-4 d-none d-lg-block" href="#">
-                            <img src="Images/logo-navbar.svg">
-                        </a>
+          <ul class="navbar-nav nav-menu-right gap-lg-5">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Despre noi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-                        <ul class="navbar-nav nav-menu-right gap-lg-5">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Despre noi</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
+    <!-- Aici se termina navbar-ul -->
+
+    <!-- Start Contact Section -->
+
+    <div class="container">
+      <!-- Start Text Introduction -->
+      <div class="pt-5">
+        <h3>Fii parte din schimbare!</h3>
+      </div>
+
+      <div class="py-3">
+        <p>Ai întrebări, sugestii sau știi un izvor care nu apare pe hartă?</p>
+        <p>Echipa noastră așteaptă mesajul tău!</p>
+        <p>Contactează-ne cu încredere și susține inițiativa WhereIsVor în orașul Piatra Neamț.</p>
+      </div>
+
+      <!-- End Text Introduction -->
+
+      <!-- Start Contact Form -->
+
+      <div class="container__contact-form">
+        <div class="row">
+          <div class="col p-5">
+            <form class="contact-form" id="contactForm" action="" method="">
+              <h4>Contactează-ne</h4>
+
+              <div class="row py-3">
+                <div class="col-lg-6 col-10">
+                  <label class="form-label py-2" for="name">Nume</label>
+                  <input class="form-control" id="name" type="text" placeholder="Numele tău" />
                 </div>
-            </nav>
 
-        <!-- Aici se termina navbar-ul -->
+                <div class="col-lg-6 col-10">
+                  <label class="form-label py-2" for="enailAddress">E-mail</label>
+                  <input
+                    class="form-control"
+                    id="emailAddress"
+                    type="email"
+                    placeholder="Adresă e-mail" />
+                </div>
+              </div>
 
-        <!-- Start Contact Section -->
+              <div class="py-3">
+                <label class="form-label py-2" for="message">Mesaj</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  type="text"
+                  placeholder="Lasă-ne mesajul tău"
+                  cols="30"
+                  rows="10"></textarea>
+              </div>
 
-            <div class="container">
+              <div class="py-3">
+                <button
+                  class="btn btn-success rounded-4 form-send px-4 py-2"
+                  id="formSend"
+                  type="submit">
+                  TRIMITE &#62;
+                </button>
+              </div>
+            </form>
+          </div>
 
-                <!-- Start Text Introduction -->
-                    <div class="pt-5">
-                        <h3>Fii parte din schimbare!</h3>
-                    </div>
-                    
-                    <div class="py-3">
-                        <p>Ai întrebări, sugestii sau știi un izvor care nu apare pe hartă?</p>
-                        <p>Echipa noastră așteaptă mesajul tău!</p>
-                        <p>Contactează-ne cu încredere și susține inițiativa WhereIsVor în orașul Piatra Neamț.</p>
-                    </div>
+          <div class="col image__contact-form"></div>
+        </div>
+      </div>
 
-                <!-- End Text Introduction -->
+      <!-- End Contact Form -->
 
-                <!-- Start Contact Form -->
+      <!-- Start Carousel GT -->
 
-                    <div class="container__contact-form">
-                        <div class="row">
-                            <div class="col p-5">
-                                <form class="contact-form" id="contactForm" action="" method="">
-                                    <h4>Contactează-ne</h4>
-                    
-                                    <div class="row py-3">
-                                        <div class="col-lg-6 col-10">
-                                            <label class="form-label py-2" for="name">Nume</label>
-                                            <input class="form-control" id="name" type="text" placeholder="Numele tău">
-                                        </div>
-                    
-                                        <div class="col-lg-6 col-10">
-                                            <label class="form-label py-2" for="enailAddress">E-mail</label>
-                                            <input class="form-control" id="emailAddress" type="email" placeholder="Adresă e-mail">
-                                        </div>
-                            
-                                    </div>
-                    
-                                    <div class="py-3">
-                                        <label class="form-label py-2" for="message">Mesaj</label>
-                                        <textarea class="form-control" id="message" type="text" placeholder="Lasă-ne mesajul tău" cols="30" rows="10"></textarea>
-                                    </div>
-                    
-                                    <div class="py-3">
-                                        <button class="btn btn-success rounded-4 form-send px-4 py-2" id="formSend" type="submit">TRIMITE &#62</button>
-                                    </div>
-                                </form>
-                            </div>
+      <section class="py-5">
+        <div class="carousel-GT" id="carouselGT">
+          <div>
+            <img src="Images/carousel-GT-1.png" alt="" class="carousel-GT__image" />
+          </div>
 
-                            <div class="col image__contact-form">
-                                    
-                            </div>
-                        </div>
-                    </div>
+          <div>
+            <img src="Images/carousel-GT-2.png" alt="" class="carousel-GT__image" />
+          </div>
 
-                <!-- End Contact Form -->
+          <div>
+            <img src="Images/carousel-GT-3.png" alt="" class="carousel-GT__image" />
+          </div>
+        </div>
+      </section>
 
-                <!-- Start Carousel GT -->
+      <!-- End Carousel GT -->
 
-                    <section class="py-5">
-                        <div class="carousel-GT" id="carouselGT">
-                            <div>
-                                <img src="Images/carousel-GT-1.png" alt="" class="carousel-GT__image">
-                            </div>
-    
-                            <div>
-                                <img src="Images/carousel-GT-2.png" alt="" class="carousel-GT__image">
-                            </div>
-    
-                            <div>
-                                <img src="Images/carousel-GT-3.png" alt="" class="carousel-GT__image">
-                            </div>
-                        </div>
-                    </section>
+      <!-- Start Team GT -->
 
-                <!-- End Carousel GT -->
+      <div class="row pb-5">
+        <div>
+          <h3>Echipa din spatele WhereIsVor:</h3>
+        </div>
 
-                <!-- Start Team GT -->
+        <div class="col-lg-12" id="projectManagement">
+          <h4 class="pt-5">Project Management</h4>
+          <a
+            href="https://www.linkedin.com/in/raluca-schiaucu"
+            class="text-decoration-none team-link"
+            target="_blank"
+            >Raluca Schiaucu</a
+          >
+        </div>
 
-                    <div class="row pb-5">
-                        <div>
-                            <h3>Echipa din spatele WhereIsVor:</h3>
-                        </div>
+        <div class="col-lg-2 col-sm-6 col-6" id="teamWebDesign">
+          <h4 class="pt-5">Web Design</h4>
+          <div>
+            <a
+              href="https://www.linkedin.com/in/bobes-bogdan"
+              class="text-decoration-none team-link"
+              target="_blank"
+              >Bogdan Bobeș</a
+            >
+          </div>
+          <div>
+            <a href="" class="text-decoration-none team-link">Mihnea Ghiza</a>
+          </div>
+          <div>
+            <a
+              href="https://www.linkedin.com/in/george-lazar-design"
+              class="text-decoration-none team-link"
+              target="_blank"
+              >George Lazăr</a
+            >
+          </div>
+        </div>
 
-                        <div class="col-lg-12" id="projectManagement">
-                            <h4 class="pt-5">Project Management</h4>
-                            <a href="https://www.linkedin.com/in/raluca-schiaucu" class="text-decoration-none team-link" target="_blank">Raluca Schiaucu</a>
-                        </div>
+        <div class="col-lg-2 col-sm-6 col-6" id="teamWebDevs">
+          <h4 class="pt-5">Web Devs</h4>
+          <div>
+            <a
+              href="http://www.linkedin.com/in/maria-beju"
+              class="text-decoration-none team-link"
+              target="_blank"
+              >Beju Maria</a
+            >
+          </div>
+          <div>
+            <a
+              href="https://www.linkedin.com/in/matei-mihai-ghisoiu"
+              class="text-decoration-none team-link"
+              target="_blank"
+              >Ghișoiu Matei-Mihai</a
+            >
+          </div>
+          <div>
+            <a
+              href="https://www.linkedin.com/in/luanamp/"
+              class="text-decoration-none team-link"
+              target="_blank"
+              >Pastramoiu Luana</a
+            >
+          </div>
+        </div>
 
-                    
-                        <div class="col-lg-2 col-sm-6 col-6" id="teamWebDesign">
-                            <h4 class="pt-5">Web Design</h4>
-                            <div>
-                                <a href="https://www.linkedin.com/in/bobes-bogdan" class="text-decoration-none team-link" target="_blank">Bogdan Bobeș</a>
-                            </div>
-                            <div>
-                                <a href="" class="text-decoration-none team-link">Mihnea Ghiza</a>
-                            </div>
-                            <div>
-                                <a href="https://www.linkedin.com/in/george-lazar-design" class="text-decoration-none team-link" target="_blank">George Lazăr</a>
-                            </div>
-                        </div>
+        <div class="col-lg-2 col-sm-6 col-6" id="teamJavaScript">
+          <h4 class="pt-5">JavaScript</h4>
+          <div>
+            <a href="" class="text-decoration-none team-link" target="_blank">Manolache Bogdan</a>
+          </div>
+          <div>
+            <a
+              href="https://www.linkedin.com/in/monicalauraburns/"
+              class="text-decoration-none team-link"
+              target="_blank"
+              >Burns Monica Laura</a
+            >
+          </div>
+          <div>
+            <a
+              href="https://www.linkedin.com/in/robert-raiovici/"
+              class="text-decoration-none team-link"
+              target="_blank"
+              >Raiovici Robert</a
+            >
+          </div>
+        </div>
 
-                        <div class="col-lg-2 col-sm-6 col-6" id="teamWebDevs">
-                            <h4 class="pt-5">Web Devs</h4>
-                            <div>
-                                <a href="http://www.linkedin.com/in/maria-beju" class="text-decoration-none team-link" target="_blank">Beju Maria</a>
-                            </div>
-                            <div>
-                                <a href="https://www.linkedin.com/in/matei-mihai-ghisoiu" class="text-decoration-none team-link" target="_blank">Ghișoiu Matei-Mihai</a>
-                            </div>
-                            <div>
-                                <a href="https://www.linkedin.com/in/luanamp/" class="text-decoration-none team-link" target="_blank">Pastramoiu Luana</a>
-                            </div>
-                        </div>
+        <div class="col-lg-2 col-sm-6 col-6" id="teamMarketing">
+          <h4 class="pt-5">Marketing</h4>
+          <div>
+            <a
+              href="https://www.linkedin.com/in/iuliana-theodora-bocin"
+              class="text-decoration-none team-link"
+              target="_blank"
+              >Bocin Iuliana Theodora</a
+            >
+          </div>
+          <div>
+            <a
+              href="https://www.linkedin.com/in/samuel-ardelean/"
+              class="text-decoration-none team-link"
+              target="_blank"
+              >Ardelean Samuel</a
+            >
+          </div>
+        </div>
 
-                        <div class="col-lg-2 col-sm-6 col-6" id="teamJavaScript">
-                            <h4 class="pt-5">JavaScript</h4>
-                            <div>
-                                <a href="" class="text-decoration-none team-link" target="_blank">Manolache Bogdan</a>
-                            </div>
-                            <div>
-                                <a href="https://www.linkedin.com/in/monicalauraburns/" class="text-decoration-none team-link" target="_blank">Burns Monica Laura</a>
-                            </div>
-                            <div>
-                                <a href="https://www.linkedin.com/in/robert-raiovici/" class="text-decoration-none team-link" target="_blank">Raiovici Robert</a>
-                            </div>
-                        </div>
+        <div class="col-lg-2 col-sm-6 col-6" id="teamJava">
+          <h4 class="pt-5">Java</h4>
+          <div>
+            <a
+              href="http://www.linkedin.com/in/elenamadalinamatei/"
+              class="text-decoration-none team-link"
+              target="_blank"
+              >Matei Elena-Madalina</a
+            >
+          </div>
+          <div>
+            <a
+              href="https://ro.linkedin.com/in/alexandra-ionela-badia"
+              class="text-decoration-none team-link"
+              target="_blank"
+              >Badia Alexandra Ionela</a
+            >
+          </div>
+          <div>
+            <a
+              href="https://www.linkedin.com/in/busila-george/"
+              class="text-decoration-none team-link"
+              target="_blank"
+              >Bușilă George</a
+            >
+          </div>
+        </div>
 
-                        <div class="col-lg-2 col-sm-6 col-6" id="teamMarketing">
-                            <h4 class="pt-5">Marketing</h4>
-                            <div>
-                                <a href="https://www.linkedin.com/in/iuliana-theodora-bocin" class="text-decoration-none team-link" target="_blank">Bocin Iuliana Theodora</a>
-                            </div>
-                            <div>
-                                <a href="https://www.linkedin.com/in/samuel-ardelean/" class="text-decoration-none team-link" target="_blank">Ardelean Samuel</a>
-                            </div>
-                        </div>
+        <div class="col-lg-6" id="teamMentors">
+          <h4 class="pt-5">Mentori proiect</h4>
+          <div>
+            <a
+              href="http://linkedin.com/in/bara-adina"
+              class="text-decoration-none team-link"
+              target="_blank"
+              >Adina Bâra - Web Design & Web Development</a
+            >
+          </div>
+          <div>
+            <a href="" class="text-decoration-none team-link" target="_blank"
+              >Xenia Iacob - JavaScript @ Pentalog</a
+            >
+          </div>
+          <div>
+            <a href="" class="text-decoration-none team-link" target="_blank"
+              >Marius Paltanea - Java @ Pentalog</a
+            >
+          </div>
+          <div>
+            <a
+              href="https://ro.linkedin.com/in/anita-tuzson"
+              class="text-decoration-none team-link"
+              target="_blank"
+              >Anita Tuzson - Java</a
+            >
+          </div>
+        </div>
 
-                        <div class="col-lg-2 col-sm-6 col-6" id="teamJava">
-                            <h4 class="pt-5">Java</h4>
-                            <div>
-                                <a href="http://www.linkedin.com/in/elenamadalinamatei/" class="text-decoration-none team-link" target="_blank">Matei Elena-Madalina</a>
-                            </div>
-                            <div>
-                                <a href="https://ro.linkedin.com/in/alexandra-ionela-badia" class="text-decoration-none team-link" target="_blank">Badia Alexandra Ionela</a>
-                            </div>
-                            <div>
-                                <a href="https://www.linkedin.com/in/busila-george/" class="text-decoration-none team-link" target="_blank">Bușilă George</a>
-                            </div>
-                        </div>
+        <div class="col-lg-6" id="suportTehnic">
+          <h4 class="pt-5">Suport tehnic</h4>
+          <div>
+            <a
+              href="https://www.linkedin.com/in/vlad-marian-bularca"
+              class="text-decoration-none team-link"
+              target="_blank"
+              >Vlad-Marian Bularca - Web Development</a
+            >
+          </div>
+        </div>
+      </div>
 
-                        <div class="col-lg-6" id="teamMentors">
-                            <h4 class="pt-5">Mentori proiect</h4>
-                            <div>
-                                <a href="http://linkedin.com/in/bara-adina" class="text-decoration-none team-link" target="_blank">Adina Bâra - Web Design & Web Development</a>
-                            </div>
-                            <div>
-                                <a href="" class="text-decoration-none team-link" target="_blank">Xenia Iacob - JavaScript @ Pentalog</a>
-                            </div>
-                            <div>
-                                <a href="" class="text-decoration-none team-link" target="_blank">Marius Paltanea - Java @ Pentalog</a>
-                            </div>
-                            <div>
-                                <a href="https://ro.linkedin.com/in/anita-tuzson" class="text-decoration-none team-link" target="_blank">Anita Tuzson - Java</a>
-                            </div>
-                        </div>
+      <!-- End Team GT -->
+    </div>
 
-                        <div class="col-lg-6" id="suportTehnic">
-                            <h4 class="pt-5">Suport tehnic</h4>
-                            <div>
-                                <a href="https://www.linkedin.com/in/vlad-marian-bularca" class="text-decoration-none team-link" target="_blank">Vlad-Marian Bularca - Web Development</a>
-                            </div>
-                        </div>
+    <!-- End Contact Section -->
 
-                    </div>
+    <!--List of partners-->
 
-                <!-- End Team GT -->
-                
+    <!-- Aici incepe sectiunea despre cine a facut proiectul si partenerii lui -->
+
+    <div class="container">
+      <div class="project-section">
+        <h2 class="unproiect">Un proiect:</h2>
+        <div class="project-logos">
+          <img src="Images/10.png" alt="project_logo_1" class="img-fluid" />
+          <div class="black-bar"></div>
+          <img src="Images/9.png" alt="project_logo_2" class="img-fluid" />
+        </div>
+      </div>
+
+      <div class="partners-section">
+        <h2 class="unproiect">În parteneriat cu:</h2>
+        <section class="partners-carousel slider" id="partnersCarousel">
+          <div class="slide"><img src="Images/1.png" alt="logo" /></div>
+          <div class="slide"><img src="Images/2.png" alt="logo" /></div>
+          <div class="slide"><img src="Images/3.png" alt="logo" /></div>
+          <div class="slide"><img src="Images/4.png" alt="logo" /></div>
+          <div class="slide"><img src="Images/5.png" alt="logo" /></div>
+          <div class="slide"><img src="Images/6.png" alt="logo" /></div>
+          <div class="slide"><img src="Images/7.png" alt="logo" /></div>
+          <div class="slide"><img src="Images/8.png" alt="logo" /></div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Aici se termina zona despre parteneri si cine a facut proiectul -->
+
+    <!-- Aici incepe zona pentru footer -->
+
+    <footer>
+      <div class="container p-0">
+        <div class="footer-wid border-top border-danger pt-4 border-4">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5">
+            <div class="col col-md-3 mb-4 text-center logo"><img src="Images/Logo.svg" /></div>
+            <div class="col col-md-3 mb-4 text-center">
+              <h4 class="h6">Urmărește-ne</h4>
+              <div class="social-icons">
+                <a href="#" target="_blank" class="social-icon"
+                  ><i class="fab fa-instagram fa-2x"></i
+                ></a>
+                <a href="#" target="_blank" class="social-icon"
+                  ><i class="fab fa-facebook fa-2x"></i
+                ></a>
+                <a href="#" target="_blank" class="social-icon"
+                  ><i class="fab fa-tiktok fa-2x"></i
+                ></a>
+              </div>
             </div>
-        
-        <!-- End Contact Section -->
-
-        <!--List of partners-->
-
-        <!-- Aici incepe sectiunea despre cine a facut proiectul si partenerii lui -->
-
-            <div class="container">
-                <div class="project-section">
-                    <h2 class="unproiect">Un proiect:</h2>
-                    <div class="project-logos">
-                        <img src="Images/10.png" alt="project_logo_1" class="img-fluid">
-                        <div class="black-bar"></div>
-                        <img src="Images/9.png" alt="project_logo_2" class="img-fluid">
-                    </div>
-                </div>
-
-                <div class="partners-section">
-                    <h2 class="unproiect">În parteneriat cu:</h2>
-                    <section class="partners-carousel slider" id="partnersCarousel">
-                        <div class="slide"><img src="Images/1.png" alt="logo"></div>
-                        <div class="slide"><img src="Images/2.png" alt="logo"></div>
-                        <div class="slide"><img src="Images/3.png" alt="logo"></div>
-                        <div class="slide"><img src="Images/4.png" alt="logo"></div>
-                        <div class="slide"><img src="Images/5.png" alt="logo"></div>
-                        <div class="slide"><img src="Images/6.png" alt="logo"></div>
-                        <div class="slide"><img src="Images/7.png" alt="logo"></div>
-                        <div class="slide"><img src="Images/8.png" alt="logo"></div>
-                    </section>
-                </div>
+            <div class="col col-md-3 mb-4 text-center">
+              <h4 class="h6">Linkuri parteneri</h4>
+              <ul class="list-unstyled footer-li">
+                <li><a href="#">Generația Tech</a></li>
+                <li><a href="#">Digital Nation</a></li>
+                <li><a href="#">Pentalog</a></li>
+                <li><a href="#">Primăria Piatră Neamț</a></li>
+              </ul>
             </div>
+            <div class="col col-md-3 mb-4 text-center">
+              <h4 class="h6">Linkuri utile</h4>
+              <ul class="list-unstyled footer-li">
+                <li><a href="#">Termeni și condiții</a></li>
+                <li><a href="#">Politică de cookies</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-mobile-mountains d-block d-md-none"></div>
+      <div class="copyright text-center py-3">
+        © <span class="current-year" id="currentYear">2024</span> Where IsVor. Toate drepturile
+        rezervate.
+      </div>
+    </footer>
 
-        <!-- Aici se termina zona despre parteneri si cine a facut proiectul -->
+    <!-- Aici se termina footer-ul -->
 
-        <!-- Aici incepe zona pentru footer -->
-
-            <footer>
-
-                <div class="container p-0">
-                    <div class="footer-wid border-top border-danger pt-4 border-4">
-                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5">
-                            <div class="col col-md-3 mb-4 text-center logo"><img src="Images/Logo.svg"></div>
-                            <div class="col col-md-3 mb-4 text-center">
-                                <h4 class="h6">Urmărește-ne</h4>
-                                <div class="social-icons">
-                                    <a href="#" target="_blank" class="social-icon"><i class="fab fa-instagram fa-2x"></i></a>
-                                    <a href="#" target="_blank" class="social-icon"><i class="fab fa-facebook fa-2x"></i></a>
-                                    <a href="#" target="_blank" class="social-icon"><i class="fab fa-tiktok fa-2x"></i></a>
-                                </div>
-                            </div>
-                            <div class="col col-md-3 mb-4 text-center">
-                                <h4 class="h6">Linkuri parteneri</h4>
-                                <ul class="list-unstyled footer-li">
-                                    <li><a href="#">Generația Tech</a></li>
-                                    <li><a href="#">Digital Nation</a></li>
-                                    <li><a href="#">Pentalog</a></li>
-                                    <li><a href="#">Primăria Piatră Neamț</a></li>
-                                </ul>
-                            </div>
-                            <div class="col col-md-3 mb-4 text-center">
-                                <h4 class="h6">Linkuri utile</h4>
-                                <ul class="list-unstyled footer-li">
-                                    <li><a href="#">Termeni și condiții</a></li>
-                                    <li><a href="#">Politică de cookies</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-mobile-mountains d-block d-md-none"></div>
-                <div class="copyright text-center py-3">
-                    © <span class="current-year" id="currentYear">2024</span> Where IsVor. Toate drepturile rezervate.
-                </div>
-            </footer>
-
-        <!-- Aici se termina footer-ul -->
-
-        <!-- Fisiere JS externe. Jquery, Slick, Font Awesome, etc. -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-        <script src="https://kit.fontawesome.com/ff67e41739.js" crossorigin="anonymous"></script>
-        <script src="slick.js"></script>
-
-    </body>
-
+    <!-- Fisiere JS externe. Jquery, Slick, Font Awesome, etc. -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="https://kit.fontawesome.com/ff67e41739.js" crossorigin="anonymous"></script>
+    <script src="./js/slick.js"></script>
+  </body>
 </html>

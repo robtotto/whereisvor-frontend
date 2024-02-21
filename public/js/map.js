@@ -1,4 +1,9 @@
-import { generatePopupHTML, getDistanceToWaterSpring, getSprings, displayErrorPopup } from './lib/utils.js';
+import {
+  generatePopupHTML,
+  getDistanceToWaterSpring,
+  getSprings,
+  displayErrorPopup,
+} from './lib/utils.js';
 
 // Element selectors:
 const toggleButton = document.querySelector('#buttonList');
@@ -28,49 +33,49 @@ const map = new mapboxgl.Map({
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(
     position => {
-      // get location coords
-      [lng, lat] = [position.coords.longitude, position.coords.latitude];
+      try {
+        // get location coords
+        [lng, lat] = [position.coords.longitude, position.coords.latitude];
 
-      // set map center and user marker with popup
-      map.setCenter([lng, lat]);
-      const userMarker = new mapboxgl.Marker({
-        color: '#fd7e14',
-      })
-        .setLngLat([lng, lat])
-        .setPopup(new mapboxgl.Popup({ offset: 35, closeButton: false }).setText('Aici te afli tu'))
-        .addTo(map);
+        // set map center and user marker with popup
+        map.setCenter([lng, lat]);
+        const userMarker = new mapboxgl.Marker({
+          color: '#fd7e14',
+        })
+          .setLngLat([lng, lat])
+          .setPopup(
+            new mapboxgl.Popup({ offset: 35, closeButton: false }).setText('Aici te afli tu')
+          )
+          .addTo(map);
 
-      // Add water spring markers info:
-      springs.forEach(async (spring) => {
-        try {
-          const distance = await getDistanceToWaterSpring(lng, lat, spring);
-          const popupHTML = generatePopupHTML(spring, distance);
+        // Add water spring markers info:
+        springs.forEach(async spring => {
+          try {
+            const distance = await getDistanceToWaterSpring(lng, lat, spring);
+            const popupHTML = generatePopupHTML(spring, distance);
 
-          // update marker and popup
-          const popup = new mapboxgl.Popup({
-            offset: 35,
-            closeButton: false,
-          }).setHTML(popupHTML);
+            // update marker and popup
+            const popup = new mapboxgl.Popup({
+              offset: 35,
+              closeButton: false,
+            }).setHTML(popupHTML);
 
-          const marker = new mapboxgl.Marker({ color: "#FF6161" })
-            .setLngLat([spring.longitude, spring.latitude])
-            .setPopup(popup)
-            .addTo(map);
-        } catch (error) {
-          displayErrorPopup(
-            `Error updating water spring marker: ${error.message}`
-          );
-        }
-      });
-    }, (error) =>
-    displayErrorPopup(`Error getting current position: ${error.message}`)
-  ).catch(error => {
-    displayErrorPopup(
-      `Error setting user marker and map center: ${error.message}`
-    );
-  });
+            const marker = new mapboxgl.Marker({ color: '#FF6161' })
+              .setLngLat([spring.longitude, spring.latitude])
+              .setPopup(popup)
+              .addTo(map);
+          } catch (error) {
+            displayErrorPopup(`Error updating water spring marker: ${error.message}`);
+          }
+        });
+      } catch (error) {
+        displayErrorPopup(`Error setting user marker and map center: ${error.message}`);
+      }
+    },
+    error => displayErrorPopup(`Error getting current position: ${error.message}`)
+  );
 } else {
-  displayErrorPopup("Geolocation is not supported by your browser.");
+  displayErrorPopup('Geolocation is not supported by your browser.');
 }
 
 // Add default markers on the map without geolocation:
@@ -86,7 +91,4 @@ springs.forEach(spring => {
     .setLngLat([spring.longitude, spring.latitude])
     .setPopup(popup)
     .addTo(map);
-
 });
-
-
