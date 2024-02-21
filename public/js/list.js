@@ -1,7 +1,7 @@
 // list.js
 import { getSprings, displayErrorPopup } from './lib/utils.js';
 
-// Fetching springs data and proceeding
+// Fetching springs data 
 getSprings().then(springs => {
     const gridCards = document.querySelector('.grid-cards');
     if (springs) {
@@ -16,6 +16,7 @@ getSprings().then(springs => {
     }
 });
 
+// create the grid of springs
 function createCard(item) {
     const card = document.createElement('div');
     card.classList.add('overflow-hidden', 'border-secondary', 'card', 'card-details');
@@ -57,6 +58,7 @@ function createCard(item) {
     .catch(error => {
         // Custom error handling
         displayErrorPopup(`Location not found: ${error}`);
+        throw error;
     });
 
     return card;
@@ -75,6 +77,7 @@ const reverseGeocode = async (lng, lat) => {
     } catch (error) {
         // Custom error handling
         displayErrorPopup(`Location not found: ${error}`);
-        throw error; 
+        throw error;
+        
     }
 };
