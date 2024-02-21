@@ -70,4 +70,39 @@ export async function getSprings() {
       `;
     }
 
+ ////////////////// HANDLE ERROR ////////////////////////////////
+export function displayErrorPopup(errorMessage) {
+  const errorModal = document.createElement("div");
+  errorModal.innerHTML = `
+    <div class="modal fade modal-no-backdrop" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-danger" id="errorModalLabel">Error</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>${errorMessage}</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary text-danger" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  // Append the modal to the body of your HTML
+  document.body.appendChild(errorModal);
+
+  // Show the modal
+  const errorModalInstance = new bootstrap.Modal(
+    document.getElementById("errorModal"),
+    { backdrop: false }
+  );
+  errorModalInstance.show();
+}
+
+    
+
     
