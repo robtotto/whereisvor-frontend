@@ -1,4 +1,4 @@
-import { generatePopupHTML, getDistanceToWaterSpring, getSprings } from './lib/utils.js';
+import { generatePopupHTML, getDistanceToWaterSpring, getSprings, displayErrorPopup } from './lib/utils.js';
 
 // Element selectors:
 const toggleButton = document.querySelector('#buttonList');
@@ -24,7 +24,6 @@ const map = new mapboxgl.Map({
   .addControl(new mapboxgl.NavigationControl())
   .addControl(new mapboxgl.ScaleControl());
 
-//
 // Check geolocation and set map center with new coords if allowed
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(
@@ -42,24 +41,37 @@ if (navigator.geolocation) {
         .addTo(map);
 
       // Add water spring markers info:
-      springs.forEach(async spring => {
-        const distance = await getDistanceToWaterSpring(lng, lat, spring);
-        const popupHTML = generatePopupHTML(spring, distance);
+      springs.forEach(async (spring) => {
+        try {
+          const distance = await getDistanceToWaterSpring(lng, lat, spring);
+          const popupHTML = generatePopupHTML(spring, distance);
 
-        // update marker and popup
-        const popup = new mapboxgl.Popup({ offset: 35, closeButton: false }).setHTML(popupHTML);
+          // update marker and popup
+          const popup = new mapboxgl.Popup({
+            offset: 35,
+            closeButton: false,
+          }).setHTML(popupHTML);
 
-        const marker = new mapboxgl.Marker({ color: '#FF6161' })
-          .setLngLat([spring.longitude, spring.latitude])
-          .setPopup(popup)
-          .addTo(map);
-          console.log(`spring name: ${spring.name}`);
+          const marker = new mapboxgl.Marker({ color: "#FF6161" })
+            .setLngLat([spring.longitude, spring.latitude])
+            .setPopup(popup)
+            .addTo(map);
+        } catch (error) {
+          displayErrorPopup(
+            `Error updating water spring marker: ${error.message}`
+          );
+        }
       });
-    },
-    error => alert('No coordinates available!')
-  );
+    }, (error) =>
+    displayErrorPopup(`Error getting current position: ${error.message}`)
+  ).catch(error => {
+    displayErrorPopup(
+      `Error setting user marker and map center: ${error.message}`
+    );
+  });
+} else {
+  displayErrorPopup("Geolocation is not supported by your browser.");
 }
-      
 
 // Add default markers on the map without geolocation:
 springs.forEach(spring => {
@@ -74,15 +86,7 @@ springs.forEach(spring => {
     .setLngLat([spring.longitude, spring.latitude])
     .setPopup(popup)
     .addTo(map);
+
 });
-/////////////////////////////////////////////////////////////////////
 
-// Toggle map / list
 
-let isMapVisible = true;
-
-toggleButton.addEventListener('click', function () {
-  isMapVisible = !isMapVisible;
-
-  mapContainer.style.display = isMapVisible ? 'none' : 'block';
-});
