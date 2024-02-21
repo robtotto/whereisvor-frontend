@@ -2,11 +2,11 @@
   "izvoare": [
   {
     "id": 1,
-    "name": "Izvor 1",
+    "name": "Sed quis neque id lacus maximus aliquet",
     "longitude": 25.59350159864167,
     "latitude": 45.64387187074832,
     "image": "Images/spring.png",
-    "description": "Sed quis neque id lacus maximus aliquet.  Suspendisse potenti. Sed eleifend turpis nec ex eleifend faucibus. Aenean eget ante at quam tristique ullamcorper.",
+    "description": "Sed quis neque id lacus maximus aliquet. Suspendisse potenti. Sed eleifend turpis nec ex eleifend faucibus. Aenean eget ante at quam tristique ullamcorper.",
     "likeCounter": 3
   },
   {
@@ -47,7 +47,7 @@
   },
   {
     "id": 6,
-    "name": "Izvor 6",
+    "name": "Non feugiat justo consectetur",
     "longitude": 25.58942464128678,
     "latitude": 45.64276925678877,
     "image": "Images/spring.png",
