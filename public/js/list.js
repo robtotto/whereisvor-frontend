@@ -1,22 +1,30 @@
 // list.js
 import { getSprings, displayErrorPopup } from './lib/utils.js';
 
-// Fetching springs data 
-getSprings().then(springs => {
-    const gridCards = document.querySelector('.grid-cards');
-    if (springs) {
-        springs.forEach(item => {
-            const card = createCard(item);
-            gridCards.appendChild(card);
-        });
-    } else {
-        const errorMessage = document.createElement('p');
-        errorMessage.textContent = 'Nu s-au putut încărca datele.';
-        gridCards.appendChild(errorMessage);
+// Fetch springs data 
+const loadSprings = async () => {
+    try {
+        const springs = await getSprings();
+        const gridCards = document.querySelector('.grid-cards');
+        
+        if (springs) {
+            springs.forEach(item => {
+                const card = createCard(item);
+                gridCards.appendChild(card);
+            });
+        } else {
+            // Custom error handling
+            displayErrorPopup('Nu s-au putut încărca datele.');
+        }
+    } catch (error) {
+        // Custom error handling
+        displayErrorPopup(`Error setting user marker and map center: ${error.message}`);
     }
-});
+};
 
-// create the grid of springs
+loadSprings();
+
+
 function createCard(item) {
     const card = document.createElement('div');
     card.classList.add('overflow-hidden', 'border-secondary', 'card', 'card-details');
@@ -58,7 +66,6 @@ function createCard(item) {
     .catch(error => {
         // Custom error handling
         displayErrorPopup(`Location not found: ${error}`);
-        throw error;
     });
 
     return card;
@@ -72,12 +79,11 @@ const reverseGeocode = async (lng, lat) => {
         if (data.features && data.features.length > 0) {
             return data.features[0].place_name;
         } else {
-            throw new Error('Address not found');
+            throw new Error('Adresa nu e disponibilă');
         }
     } catch (error) {
         // Custom error handling
-        displayErrorPopup(`Location not found: ${error}`);
-        throw error;
-        
+        displayErrorPopup(`Adresa nu e disponibilă: ${error}`);
+        throw error; 
     }
 };
