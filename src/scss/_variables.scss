@@ -13,5 +13,5 @@ $bg-light: #D4D4D4;
 $font-family-sans-serif: "Open Sans", sans-serif;
 
 :root {
-    font-family: $font-family-sans-serif;
+    font-family: $font-family-sans-serif !important; 
 }

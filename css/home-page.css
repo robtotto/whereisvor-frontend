@@ -1,0 +1,260 @@
+:root {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+body {
+  background-color: #EFEFEF;
+}
+
+.home-img-container {
+  aspect-ratio: 1;
+  background-image: url(../Images/ceeste.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.home-img-container2 {
+  aspect-ratio: 1;
+  background-image: url(../Images/povesteaplatformei.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.home-img-container3 {
+  aspect-ratio: 1;
+  background-image: url(../Images/misiuneaplatformei.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.home-detail {
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.home-detail:before {
+  content: "";
+  position: absolute;
+  height: 80%;
+  top: 10%;
+  left: 0;
+  z-index: 1;
+  width: 70%;
+  background-image: linear-gradient(#70B1FF, rgba(138, 190, 255, 0));
+}
+
+.home-detail.detail-right:before {
+  left: auto;
+  right: 0;
+}
+
+.home-detail > * {
+  position: relative;
+  z-index: 2;
+}
+
+.BeauApa {
+  position: relative;
+  border: #292929;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.BeauApa::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: 15%;
+  width: 60%;
+  height: 120%;
+  background-image: url("../Images/bifa.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+li {
+  list-style-type: none;
+}
+
+.navbar {
+  background-color: #EFEFEF;
+}
+
+.navbar-brand img {
+  min-height: 50px;
+  max-height: 50px;
+  width: auto;
+}
+
+.nav-menu-left,
+.nav-menu-right {
+  width: 100%;
+}
+
+.navbar-nav .nav-item .nav-link {
+  position: relative;
+  color: #292929;
+}
+
+.navbar-nav .nav-item .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: transparent;
+  transition: width 0.4s ease, background-color 0.4s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover::after {
+  width: 100%;
+  background-color: #FF6161;
+}
+
+.navbar-nav .nav-item .nav-link.active::after {
+  width: 100%;
+  background-color: #292929;
+}
+
+.hero-container {
+  background-image: url(../Images/Mountain_george.svg);
+  background-position: right bottom;
+  background-size: contain;
+  height: 100vh;
+  background-color: #EFEFEF;
+  background-repeat: no-repeat;
+  height: calc(100vh - 60px);
+}
+
+.centered-heading,
+.sub-heading {
+  position: relative;
+  padding-left: 10%;
+}
+
+.centered-heading {
+  font-size: 8.5rem;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.sub-heading {
+  font-size: 1.3rem;
+  padding-right: 20px;
+}
+
+.centred-button {
+  padding-left: 280px;
+  cursor: pointer;
+}
+
+.despre-noi-text {
+  color: #FF6161;
+  padding-left: 20%;
+}
+
+.copyright {
+  background-color: #D4D4D4;
+}
+
+@media (max-width: 575.98px) {
+  .home-detail > .container {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .centered-heading {
+    font-size: 4rem;
+  }
+  .centred-button {
+    padding-left: 120px;
+  }
+}
+@media (max-width: 767.98px) {
+  .detail-content {
+    background-image: linear-gradient(#70B1FF, rgba(138, 190, 255, 0));
+    padding: 1rem;
+  }
+  .home-detail:before {
+    display: none;
+  }
+}
+@media screen and (max-width: 992px) {
+  .centered-heading {
+    font-size: 6.5rem;
+  }
+}
+@media (max-width: 992px) {
+  .navbar-nav .nav-item .nav-link:hover::after,
+  .navbar-nav .nav-item .nav-link.active::after {
+    width: 0;
+    background-color: transparent;
+  }
+}
+@media (min-width: 768px) {
+  .home-img-container {
+    border-radius: 1rem;
+    aspect-ratio: 3/4;
+    background-image: url(../Images/ceeste.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .home-img-container {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .home-img-container2 {
+    border-radius: 1rem;
+    aspect-ratio: 3/4;
+    background-image: url(../Images/povesteaplatformei.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .home-img-container2 {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .home-img-container3 {
+    border-radius: 1rem;
+    aspect-ratio: 3/4;
+    background-image: url(../Images/misiuneaplatformei.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .home-img-container3 {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+@media (min-width: 2600px) {
+  .home-detail:before {
+    width: 55%;
+  }
+}
+@media (max-width: 992px) {
+  .BeauApa::before {
+    display: none;
+  }
+}
+.card-title {
+  margin-bottom: 30px;
+}
+
+.jos {
+  margin-top: 20px;
+}
+
+.sus {
+  margin-bottom: 20px;
+}
+
+.despre-tech,
+.despre-dn {
+  padding-left: 50px;
+}
