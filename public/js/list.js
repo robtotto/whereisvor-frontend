@@ -7,7 +7,7 @@ const loadSprings = async () => {
         const springs = await getSprings();
         const gridCards = document.querySelector('.grid-cards');
         
-        if (springs) {
+        if (springs) { 
             springs.forEach(item => {
                 const card = createCard(item);
                 gridCards.appendChild(card);
@@ -18,14 +18,14 @@ const loadSprings = async () => {
         }
     } catch (error) {
         // Custom error handling
-        displayErrorPopup(`Error setting user marker and map center: ${error.message}`);
+        displayErrorPopup(`Nu s-au putut încărca datele: ${error.message}`);
     }
 };
 
 loadSprings();
 
-
-function createCard(item) {
+//create grid for springs
+const createCard = (item) => {
     const card = document.createElement('div');
     card.classList.add('overflow-hidden', 'border-secondary', 'card', 'card-details');
 
@@ -57,6 +57,16 @@ function createCard(item) {
     heartIcon.classList.add('position-absolute', 'bottom-0', 'end-0', 'heart-card');
     cardBody.appendChild(heartIcon);
 
+    // Reverse geocode spring's location
+    reverseGeocode(item.longitude, item.latitude)
+    .then(springAddress => {
+        location.textContent = `${springAddress}`;
+    })
+    .catch(error => {
+        // Custom error handling
+        displayErrorPopup(`Adresa nu a fost găsită: ${error}`);
+    });
+
     // Reverse geocoding spring's location
     reverseGeocode(item.longitude, item.latitude)
     .then(springAddress => {
@@ -65,7 +75,7 @@ function createCard(item) {
     })
     .catch(error => {
         // Custom error handling
-        displayErrorPopup(`Location not found: ${error}`);
+        displayErrorPopup(`Adresa nu a fost găsită: ${error}`);
     });
 
     return card;
