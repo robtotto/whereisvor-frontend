@@ -28,7 +28,7 @@ $(document).ready(function () {
 $(document).ready(function(){
     $('.carousel-GT').slick({
         dots: true,
-        autoplay: false,
+        autoplay: true,
         infinite: true,
         speed: 300,
         slidesToShow: 1,
