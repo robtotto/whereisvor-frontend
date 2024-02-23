@@ -1,9 +1,9 @@
 :root {
-  font-family: "Open Sans", sans-serif !important;
+  font-family: 'Open Sans', sans-serif !important;
 }
 
 body {
-  background-color: #EFEFEF;
+  background-color: #efefef;
 }
 
 .button-map {
@@ -40,15 +40,17 @@ body {
 }
 .grid-cards .card-details {
   border-radius: 25px;
-  background-color: #EFEFEF;
+  background-color: #efefef;
 }
 .grid-cards .card-title {
   margin-bottom: 4px;
 }
-.grid-cards .card-title, .grid-cards .card-text {
+.grid-cards .card-title,
+.grid-cards .card-text {
   color: #212121;
 }
-.grid-cards .card-text, .grid-cards .card-text-km {
+.grid-cards .card-text,
+.grid-cards .card-text-km {
   padding-right: 20%;
 }
 .grid-cards .heart-card {
@@ -57,15 +59,15 @@ body {
   scale: 1.5;
 }
 .grid-cards .card-text-km {
-  color: #7F7F7F;
+  color: #7f7f7f;
   margin-top: 2px;
 }
 .grid-cards .img-spring-card {
   border-radius: 25px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -o-object-position: center;
-     object-position: center;
+  object-position: center;
   max-width: 100%;
   width: 400px;
 }

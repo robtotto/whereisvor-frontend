@@ -1,29 +1,28 @@
 ////////////////// FAKE API SERVER ////////////////////////////////
 export async function getSprings() {
-    const res = await fetch('http://localhost:8000/izvoare');
-    const data = await res.json();
-    return data;
-  }
-  
-  ////////////////////// Calculate Distances //////////////////////////
-  export async function getDistanceToWaterSpring(userLng, userLat, targetSpring) {
-    // get distance
-    const response = await fetch(
-      `https://api.mapbox.com/directions/v5/mapbox/walking/${userLng},${userLat};${targetSpring.longitude},${targetSpring.latitude}?alternatives=false&geometries=geojson&overview=simplified&steps=false&access_token=pk.eyJ1IjoiYm9nZGFuLTI4IiwiYSI6ImNsczNobDdicDB5cWcydm1lOGtnMXZjYWkifQ.UI-Umu7Pb1hHE2ZsQ7DYBQ`
-    );
-  
-    const data = await response.json();
-    const distance = (data.routes[0].distance / 1000).toFixed(2); //km
-  
-    return distance;
-  }
-  
-  
-  ///////////////////////Generate HTML for popups ///////////////////
-  export function generatePopupHTML(spring, distance = null) {
-    // Custom popup:
-    return !distance
-      ? `
+  const res = await fetch('http://localhost:8000/izvoare');
+  const data = await res.json();
+  return data;
+}
+
+////////////////////// Calculate Distances //////////////////////////
+export async function getDistanceToWaterSpring(userLng, userLat, targetSpring) {
+  // get distance
+  const response = await fetch(
+    `https://api.mapbox.com/directions/v5/mapbox/walking/${userLng},${userLat};${targetSpring.longitude},${targetSpring.latitude}?alternatives=false&geometries=geojson&overview=simplified&steps=false&access_token=pk.eyJ1IjoiYm9nZGFuLTI4IiwiYSI6ImNsczNobDdicDB5cWcydm1lOGtnMXZjYWkifQ.UI-Umu7Pb1hHE2ZsQ7DYBQ`
+  );
+
+  const data = await response.json();
+  const distance = (data.routes[0].distance / 1000).toFixed(2); //km
+
+  return distance;
+}
+
+///////////////////////Generate HTML for popups ///////////////////
+export function generatePopupHTML(spring, distance = null) {
+  // Custom popup:
+  return !distance
+    ? `
     <div id="popup-card" class="overflow-hidden card">
           <div class="row g-0">
           <div class="col-4 pupup-image">
@@ -45,7 +44,7 @@ export async function getSprings() {
     </div>
         
     `
-      : `
+    : `
     <div class="overflow-hidden card">
           <div class="row g-0">
           <div class="col-4">
@@ -68,11 +67,11 @@ export async function getSprings() {
         </div>
       </div> 
       `;
-    }
+}
 
- ////////////////// HANDLE ERROR ////////////////////////////////
+////////////////// HANDLE ERROR ////////////////////////////////
 export function displayErrorPopup(errorMessage) {
-  const errorModal = document.createElement("div");
+  const errorModal = document.createElement('div');
   errorModal.innerHTML = `
     <div class="modal fade modal-no-backdrop" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -96,13 +95,22 @@ export function displayErrorPopup(errorMessage) {
   document.body.appendChild(errorModal);
 
   // Show the modal
-  const errorModalInstance = new bootstrap.Modal(
-    document.getElementById("errorModal"),
-    { backdrop: false }
-  );
+  const errorModalInstance = new bootstrap.Modal(document.getElementById('errorModal'), {
+    backdrop: false,
+  });
   errorModalInstance.show();
 }
 
-    
+//////////////////////Update likes ////////////////////
+export async function updateLikeCounter(id, springToUpdate) {
+  const res = await fetch(`http://localhost:8000/izvoare/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body: JSON.stringify({ ...springToUpdate, likeCounter: springToUpdate.likeCounter + 1 }),
+  });
 
-    
+  const data = await res.json();
+  console.log(data);
+}
