@@ -7,7 +7,7 @@
       "latitude": 45.64387187074832,
       "image": "Images/spring.png",
       "description": "Sed quis neque id lacus maximus aliquet. Suspendisse potenti. Sed eleifend turpis nec ex eleifend faucibus. Aenean eget ante at quam tristique ullamcorper.",
-      "likeCounter": 11
+      "likeCounter": 12
     },
     {
       "id": "2",
@@ -16,7 +16,7 @@
       "latitude": 45.636348798796504,
       "image": "Images/spring.png",
       "description": "Am intalnit un izvor fericit",
-      "likeCounter": 17
+      "likeCounter": 18
     },
     {
       "id": "3",
@@ -25,7 +25,7 @@
       "latitude": 45.64348933366974,
       "image": "Images/spring.png",
       "description": "Acesta este un izvor vesel si zglobiu.",
-      "likeCounter": 22
+      "likeCounter": 27
     },
     {
       "id": "4",
@@ -34,7 +34,7 @@
       "latitude": 45.636798899522084,
       "image": "Images/spring.png",
       "description": "Cras vestibulum nisi ac lorem faucibus, non feugiat justo consectetur.",
-      "likeCounter": 10
+      "likeCounter": 12
     },
     {
       "id": "5",
