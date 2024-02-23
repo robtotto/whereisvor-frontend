@@ -43,9 +43,7 @@ if (navigator.geolocation) {
           color: '#fd7e14',
         })
           .setLngLat([lng, lat])
-          .setPopup(
-            new mapboxgl.Popup({ offset: 35, closeButton: false }).setText('Aici te afli tu')
-          )
+          .setPopup(new mapboxgl.Popup({ closeButton: false }).setText('Aici te afli tu'))
           .addTo(map);
 
         // Add water spring markers info:
@@ -56,7 +54,6 @@ if (navigator.geolocation) {
 
             // update marker and popup
             const popup = new mapboxgl.Popup({
-              offset: 35,
               closeButton: false,
             }).setHTML(popupHTML);
 
@@ -83,7 +80,6 @@ springs.forEach(spring => {
   const popupHTML = generatePopupHTML(spring);
 
   const popup = new mapboxgl.Popup({
-    offset: 35,
     closeButton: false,
   }).setHTML(popupHTML);
 

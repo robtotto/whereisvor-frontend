@@ -2,10 +2,10 @@
 
 .mapboxgl-popup {
   position: absolute;
-  z-index:2 !important;
-  max-width:275px !important;
+  z-index: 2 !important;
+  max-width: 275px !important;
   max-height: 120px;
-  bottom:0
+  bottom: 0;
 }
 
 .mapboxgl-popup .card-title {
@@ -17,19 +17,32 @@
 }
 
 #popup-card p {
-  font-size:12px;
+  font-size: 12px;
+}
+
+/* .mapboxgl-popup {
+  transform: none !important;
+  background-color: red;
 }
 
 .mapboxgl-popup-content {
-  background: transparent !important;
+  width: 400px;
 }
 
+.mapboxgl-popup-tip {
+  display: none !important;
+} */
+
+/* .mapboxgl-popup-content {
+  background: transparent !important;
+} */
+
 .mapboxgl-popup-close-button {
-  position: absolute; 
-  top: 5px !important; 
-  right: 12px !important; 
-  color: #111111; 
-  border: none; 
+  position: absolute;
+  top: 5px !important;
+  right: 12px !important;
+  color: #111111;
+  border: none;
   padding: 5px;
   background: transparent !important;
 }
@@ -37,41 +50,39 @@
 /* Heart likes */
 
 .heart-card {
-  max-width:30px;
+  max-width: 30px;
   max-height: 30px;
   margin-bottom: 0;
   margin-right: 0;
-  margin-left:5px;
-  margin-top:5px
+  margin-left: 5px;
+  margin-top: 5px;
 }
 
-.heart-container{
+.heart-container {
   position: relative;
   margin-top: 7px;
 }
 
-.like-counter{
-  position:absolute;
-  right:0;
-  bottom:0;
+.like-counter {
+  position: absolute;
+  right: 0;
+  bottom: 0;
   font-size: 9px;
 }
 
-
 @media (max-width: 767.98px) {
   #popup-card {
-    max-width:175px !important;
+    max-width: 175px !important;
     max-height: 70px;
   }
 
   #popup-card .card-title {
     font-size: 16px;
     margin-bottom: 5px !important;
-  }   
+  }
 
   .heart-card {
-    max-width:20px;
+    max-width: 20px;
     max-height: 20px;
   }
-  
 }
