@@ -1,3 +1,146 @@
 :root {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif !important;
+}
+
+body {
+  background-color: #EFEFEF;
+}
+
+.contact-form_section {
+  border-radius: 10px;
+  background-color: #D9D9D9;
+}
+
+.contact-form_image {
+  background-image: url("../Images/harta-contact.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0 10px 10px 0;
+}
+
+.form-send {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.carousel-GT {
+  border-radius: 10px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.carousel-GT__image {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.slide-dots-GT {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(16px + 2rem);
+  margin: 0;
+  padding: 1rem 0;
+  list-style-type: none;
+}
+.slide-dots-GT li {
+  margin: 0 0.25rem;
+}
+.slide-dots-GT button {
+  display: block;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  transition: all 0.5s ease-in-out;
+  border: none;
+  border-radius: 100%;
+  background-color: #126704;
+  text-indent: -9999px;
+}
+.slide-dots-GT li.slick_arrow_GT button {
+  background-color: #126704;
+  transform: scale(2);
+}
+
+.slide-dots-GT li.slick-active button {
+  width: 16px;
+  height: 16px;
+  background-color: #126704;
+  border-radius: 100%;
+}
+
+.slick_arrow_GT {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 60px;
+  height: 60px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.slick_arrow_GT.prev {
+  left: -50px;
+}
+
+.slick_arrow_GT.next {
+  right: -50px;
+}
+
+.slick_arrow_GT:after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 24px;
+}
+
+.slick_arrow_GT.prev:after {
+  border-left: 3px solid #000000;
+  border-bottom: 3px solid #000000;
+  transform: rotate(45deg);
+  left: 24px;
+}
+
+.slick_arrow_GT.next:after {
+  border-right: 3px solid #000000;
+  border-bottom: 3px solid #000000;
+  transform: rotate(-45deg);
+  right: 24px;
+}
+
+@media (max-width: 992px) {
+  .contact-form_image {
+    display: none;
+  }
+  .team-webdesign {
+    margin-right: 0 !important;
+  }
+  .team-webdevs {
+    margin-right: 0 !important;
+  }
+  .team-javascript {
+    margin-right: 0 !important;
+  }
+  .team-marketing {
+    margin-right: 0 !important;
+  }
+}
+@media (max-width: 768px) {
+  .slick_arrow_GT {
+    top: calc(50% - 30px);
+    width: 40px;
+    height: 40px;
+    font-size: 50px;
+  }
+  .slick_arrow_GT.prev {
+    left: 10px;
+  }
+  .slick_arrow_GT.next {
+    right: 5px;
+  }
 }

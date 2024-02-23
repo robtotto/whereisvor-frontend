@@ -1,10 +1,9 @@
 :root {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif !important;
 }
 
 body {
-  background-color: #efefef;
-  font-family: 'Open Sans', sans-serif !important;
+  background-color: #EFEFEF;
 }
 
 .map-parent {
@@ -17,6 +16,7 @@ body {
 
 .button-list:hover {
   background-color: #126704;
+  border: #126704;
 }
 
 .map-resposive {
@@ -24,7 +24,7 @@ body {
   padding-bottom: 40%;
   position: relative;
   height: 0;
-  border: solid 2px #ff6161;
+  border: solid 2px #FF6161;
 }
 
 @media (max-width: 767.98px) {
@@ -55,17 +55,25 @@ body {
   bottom: 24px;
 }
 
-.card-title {
+.card-text-km {
+  color: #7F7F7F;
+  margin-top: 2px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.card-title, .card-text {
   color: #212121;
 }
 
-.card-text-km {
-  color: #7f7f7f;
+.card-text, .card-text-km {
+  padding-right: 17%;
 }
 
 .heart-card {
-  margin-bottom: 15px;
-  margin-right: 15px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  scale: 1.5;
 }
 
 .img-spring-card {
@@ -74,5 +82,5 @@ body {
   height: 100%;
   max-height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }

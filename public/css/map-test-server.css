@@ -1,76 +1,77 @@
 /* Map pop-up template */
 
-#popup-card {
-    max-width:275px !important;
-    max-height: 120px;
-    position: relative;
-    z-index:2 !important;
+.mapboxgl-popup {
+  position: absolute;
+  z-index:2 !important;
+  max-width:275px !important;
+  max-height: 120px;
+  bottom:0
+}
+
+.mapboxgl-popup .card-title {
+  margin-bottom: 14px !important;
+}
+
+.mapboxgl-popup .card-text-km {
+  font-size: 12px !important;
+}
+
+#popup-card p {
+  font-size:12px;
+}
+
+.mapboxgl-popup-content {
+  background: transparent !important;
+}
+
+.mapboxgl-popup-close-button {
+  position: absolute; 
+  top: 5px !important; 
+  right: 12px !important; 
+  color: #111111; 
+  border: none; 
+  padding: 5px;
+  background: transparent !important;
+}
+
+/* Heart likes */
+
+.heart-card {
+  max-width:30px;
+  max-height: 30px;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left:5px;
+  margin-top:5px
+}
+
+.heart-container{
+  position: relative;
+  margin-top: 7px;
+}
+
+.like-counter{
+  position:absolute;
+  right:0;
+  bottom:0;
+  font-size: 9px;
+}
+
+
+@media (max-width: 767.98px) {
+  #popup-card {
+    max-width:175px !important;
+    max-height: 70px;
   }
 
   #popup-card .card-title {
-    margin-bottom: 14px !important;
-  }
-  
-  #popup-card .card-text-km {
-    font-size: 12px !important;
-  }
-  
-  #popup-card p {
-    font-size:12px;
-  }
-  
-  .mapboxgl-popup-content {
-    background: transparent !important;
-  }
-  
-  .mapboxgl-popup-close-button {
-    position: absolute; 
-    top: 5px !important; 
-    right: 12px !important; 
-    color: #111111; 
-    border: none; 
-    padding: 5px;
-    background: transparent !important;
-  }
-  
-  /* Heart likes */
+    font-size: 16px;
+    margin-bottom: 5px !important;
+  }   
 
   .heart-card {
-    max-width:30px;
-    max-height: 30px;
-    margin-bottom: 0;
-    margin-right: 0;
-    margin-left:5px;
-    margin-top:5px
+    max-width:20px;
+    max-height: 20px;
   }
   
-  .heart-container{
-    position: relative;
-    margin-top: 7px;
-  }
-  
-  .like-counter{
-    position:absolute;
-    right:0;
-    bottom:0;
-    font-size: 9px;
-  }
-  
-  
-  @media (max-width: 767.98px) {
-    #popup-card {
-      max-width:175px !important;
-      max-height: 70px;
-    }
-
-    #popup-card .card-title {
-      font-size: 16px;
-      margin-bottom: 5px !important;
-    }   
-
-    .heart-card {
-      max-width:20px;
-      max-height: 20px;
-    }
-    
-  }
+}

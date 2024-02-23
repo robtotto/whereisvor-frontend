@@ -29,10 +29,45 @@
     <script type="module" src="js/list.js"></script>
   </head>
   <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-      <!-- Codul pentru navbar generat din JS -->
-    </nav>
+   <!-- Aici incepe navbar-ul -->
+
+   <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+
+        <a class="navbar-brand mx-lg-4 d-block d-lg-none" href="home-page.html">
+            <img src="Images/logo-navbar.svg">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-lg-center" id="navbarNav">
+            <ul class="navbar-nav nav-menu-left justify-content-lg-end gap-lg-5">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="home-page.html">Acasă</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="map.html">Izvoare</a>
+                </li>
+            </ul>
+
+            <a class="navbar-brand mx-lg-4 d-none d-lg-block" href="home-page.html">
+                <img src="Images/logo-navbar.svg">
+            </a>
+
+            <ul class="navbar-nav nav-menu-right gap-lg-5">
+                <li class="nav-item">
+                    <a class="nav-link" href="#DespreNoi">Despre noi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Aici se termina navbar-ul -->
     <!-- Lista de izvoare -->
     <div class="container" id="grid-container">
       <a
