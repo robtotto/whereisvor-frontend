@@ -3,6 +3,7 @@ import {
   getDistanceToWaterSpring,
   getSprings,
   displayErrorPopup,
+  updateLikeCounter,
 } from './lib/utils.js';
 
 // Element selectors:
@@ -52,11 +53,40 @@ if (navigator.geolocation) {
             const distance = await getDistanceToWaterSpring(lng, lat, spring);
             const popupHTML = generatePopupHTML(spring, distance);
 
+            ////////////// LIKE COUNTER UPDATE //////////////
+            const popupContent = document.createElement('div');
+            popupContent.innerHTML = `       
+        <div class="popup__card">
+            <div class="popup__card--image">
+                <img src="${spring.image}" alt="img">
+            </div>
+            <div class="popup__card--content">
+                <h4>${spring.name}</h4>
+                <p>${distance} km</p>
+                <img
+                  src="Images/heart-symbol.svg"
+                  class="popup__card--heart"
+                  alt="heart-symbol" 
+                  data-id="${spring.id}"/>
+            </div>
+        </div>
+            `;
+
             // update marker and popup
             const popup = new mapboxgl.Popup({
               closeButton: false,
-            }).setHTML(popupHTML);
+            }).setDOMContent(popupContent);
 
+            popup.on('open', () => {
+              popupContent.addEventListener('click', e => {
+                if (!e.target.classList.contains('popup__card--heart')) return;
+
+                console.log(e.target.dataset.id);
+
+                updateLikeCounter(e.target.dataset.id, spring);
+              });
+            });
+            ////////////////////////////////////////////////////////////
             const marker = new mapboxgl.Marker({ color: '#FF6161' })
               .setLngLat([spring.longitude, spring.latitude])
               .setPopup(popup)
@@ -79,9 +109,38 @@ if (navigator.geolocation) {
 springs.forEach(spring => {
   const popupHTML = generatePopupHTML(spring);
 
+  ////////////// LIKE COUNTER UPDATE //////////////
+  const popupContent = document.createElement('div');
+  popupContent.innerHTML = `       
+<div class="popup__card">
+  <div class="popup__card--image">
+      <img src="${spring.image}" alt="img">
+  </div>
+  <div class="popup__card--content">
+      <h4>${spring.name}</h4>
+      <img
+        src="Images/heart-symbol.svg"
+        class="popup__card--heart"
+        alt="heart-symbol" 
+        data-id="${spring.id}"/>
+  </div>
+</div>
+  `;
+
   const popup = new mapboxgl.Popup({
     closeButton: false,
-  }).setHTML(popupHTML);
+  }).setDOMContent(popupContent);
+
+  popup.on('open', () => {
+    popupContent.addEventListener('click', e => {
+      if (!e.target.classList.contains('popup__card--heart')) return;
+
+      console.log(e.target.dataset.id);
+
+      updateLikeCounter(e.target.dataset.id, spring);
+    });
+  });
+  ////////////////////////////////////////////////////////////
 
   const marker = new mapboxgl.Marker({ color: '#FF6161' })
     .setLngLat([spring.longitude, spring.latitude])
