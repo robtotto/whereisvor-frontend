@@ -22,10 +22,10 @@
 
     <!-- Aici incepe navbar-ul -->
 
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar sticky-top navbar-expand-lg">
         <div class="container-fluid">
 
-            <a class="navbar-brand mx-lg-4 d-block d-lg-none" href="home-page.html">
+            <a class="navbar-brand mx-lg-5 d-block d-lg-none" href="index.html">
                 <img src="Images/logo-navbar.svg">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -35,20 +35,20 @@
             <div class="collapse navbar-collapse justify-content-lg-center" id="navbarNav">
                 <ul class="navbar-nav nav-menu-left justify-content-lg-end gap-lg-5">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="home-page.html">Acasă</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Acasă</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="map.html">Izvoare</a>
+                        <a class="nav-link" href="lista-izvoare.html">Izvoare</a>
                     </li>
                 </ul>
 
-                <a class="navbar-brand mx-lg-4 d-none d-lg-block" href="home-page.html">
+                <a class="navbar-brand mx-lg-5 d-none d-lg-block" href="index.html">
                     <img src="Images/logo-navbar.svg">
                 </a>
 
                 <ul class="navbar-nav nav-menu-right gap-lg-5">
                     <li class="nav-item">
-                        <a class="nav-link" href="#DespreNoi">Despre noi</a>
+                        <a class="nav-link" href="index.html#DespreNoi">Despre noi</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
@@ -75,9 +75,10 @@
 
     <section class="DeCeBeauApa py-5">
         <div class="container py-5 BeauApa">
-            <h2 class="text-center mt-4 mb-5">De ce să bei apă de izvor?</h2>
-
             <div class="row">
+                <h2 class="text-center mt-4 mb-5">De ce să bei apă de izvor?</h2>
+
+
                 <div class="col-md-6 text-center d-flex justify-content-center">
                     <ul class="list-unstyled">
                         <li class="d-flex py-2"><img src="Images/bifa.svg" width="25" height="25" class="me-3">Este
@@ -123,7 +124,8 @@
                             <h5>
                                 Ce este Where IsVor?
                             </h5>
-                            <p>WhereIsVor este o platformă interactivă dedicată orașului Piatra Neamț, care îți oferă
+                            <p>WhereIsVor este o platformă interactivă dedicată orașului Piatra Neamț, care îți
+                                oferă
                                 oportunitatea de a descoperi cele mai apropiate izvoare de tine, la doar un click
                                 distanță.
                                 Explorează acum harta și găsește cel mai apropiat izvor de casa ta!
@@ -134,7 +136,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
 
@@ -201,14 +202,14 @@
     <h3 class="despre-noi-text py-3" id="DespreNoi">Despre noi</h3>
 
     <section class="despre-noi">
-        <div class="container mt-5">
+        <div class="container mt-4">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-body">
+                <div class="col-md-6 d-flex gap-3 flex-column">
+                    <div class="bg-desprenoi position-relative">
+                        <div class="text-despre">
                             <object class="position-absolute top-0 start-0 quote-svg top-left sus"
                                 data="Images/quotes-sus.svg" type="image/svg+xml" width="50" height="50"></object>
-                            <h5 class="card-title despre-tech">Despre Generația Tech</h5>
+                            <h5 class="despre-tech">Despre Generația Tech</h5>
                             <p class="card-text">
                                 Suntem Generația Tech, un grup de tineri entuziaști și pasionați de tehnologie, motivați
                                 să aducem schimbarea pozitivă în orașele mici și medii din România.
@@ -224,22 +225,20 @@
                                 data="Images/quotes-jos.svg" type="image/svg+xml" width="50" height="50"></object>
                         </div>
                     </div>
-                    <img src="Images/poza-gt.svg" alt="Image" class="img-fluid imagine-digital mt-3 img-stanga">
+                    <img src="Images/poza-gt.svg" alt="Image" class="img-fluid imagine-digital img-stanga">
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-6 d-flex flex-column-reverse gap-3 flex-md-column ecrane-mici">
                     <img src="Images/poza-gt.svg" alt="Image" class="img-fluid imagine-digital img-dreapta">
-                    <div class="card mt-3 card-dreapta">
-                        <div class="card-body">
-                            <h5 class="card-title">Despre Digital Nation</h5>
+                    <div class="bg-desprenoi">
+                        <div class="text-despre">
+                            <h5 class="despre-tech2">Despre Digital Nation</h5>
                             <p class="card-text py-3">
                                 Digital Nation lucrează de peste 7 ani la misiunea să de accelerare a transformării
                                 digitale în România. Eforturile organizației se îndreaptă către toate categoriile de
                                 public dornice de specializare sau reconversie în zona digitală, prin multiple Programe
                                 naționale precum Generația Tech, IMM în Online și Profesor în Online prin care a
                                 influențat pozitiv peste 100.000 de oameni din întreaga țară.
-                                <br>
-                                <br>
                             </p>
                         </div>
                     </div>
@@ -283,7 +282,7 @@
 
     <footer>
 
-        <div class="container p-0">
+        <div class="container">
             <div class="footer-wid border-top border-danger pt-4 border-4">
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5">
                     <div class="col col-md-3 mb-4 text-center logo"><img src="Images/Logo.svg"></div>

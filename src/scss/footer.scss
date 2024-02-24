@@ -78,6 +78,8 @@
     position: relative;
     display: block;
     box-sizing: border-box;
+    padding-right: 25px;
+    padding-left: 25px;
 }
 
 .partners-section .slick-list {
@@ -114,6 +116,14 @@
 .partners-section .slick-next:before {
     color: $dark;
     font-size: 25px;
+}
+
+.partners-section .slick-prev {
+    left: 0;
+}
+
+.partners-section .slick-next {
+    right: 0;
 }
 
 

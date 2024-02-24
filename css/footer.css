@@ -3,7 +3,7 @@
 }
 
 .copyright {
-  background-color: #D4D4D4;
+  background-color: #d4d4d4;
 }
 
 .partners-container {
@@ -80,6 +80,8 @@
   position: relative;
   display: block;
   box-sizing: border-box;
+  padding-right: 25px;
+  padding-left: 25px;
 }
 
 .partners-section .slick-list {
@@ -116,6 +118,14 @@
 .partners-section .slick-next:before {
   color: #292929;
   font-size: 25px;
+}
+
+.partners-section .slick-prev {
+  left: 0;
+}
+
+.partners-section .slick-next {
+  right: 0;
 }
 
 /* .footer-wid {
@@ -167,7 +177,7 @@
 }
 
 footer h4 {
-  border-bottom: 2px solid #70B1FF;
+  border-bottom: 2px solid #70b1ff;
   display: inline-block;
   padding-bottom: 8px;
   margin-bottom: 10px;

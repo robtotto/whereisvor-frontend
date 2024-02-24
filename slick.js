@@ -9,15 +9,24 @@ $(document).ready(function () {
                 pauseOnHover: true,
                 responsive: [
                     {
-                        breakpoint: 768,
+                        breakpoint: 992,
                         settings: {
-                            slidesToShow: 2
+                            slidesToShow: 2,
+                            arrows: false,
                         }
                     },
                     {
-                        breakpoint: 520,
+                        breakpoint: 768,
                         settings: {
-                            slidesToShow: 2
+                            slidesToShow: 2,
+                            arrows: false,
+                        }
+                    },
+                    {
+                        breakpoint: 576,
+                        settings: {
+                            slidesToShow: 2,
+                            arrows: false,
                         }
                     }
                 ]

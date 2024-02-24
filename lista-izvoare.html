@@ -2,32 +2,30 @@
 <html lang="ro-RO">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Listă Izvoare</title>
     <!-- Fisiere de CSS externe. Styles, Slick, etc. -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
         integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/nav-bar.css">
-    <link rel="stylesheet" href="css/lista-izvoare.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/nav-bar.css" />
+    <link rel="stylesheet" href="css/lista-izvoare.css" />
+    <link rel="stylesheet" href="css/footer.css" />
 </head>
 
 <body>
-
     <!--Navbar-->
 
     <!-- Aici incepe navbar-ul -->
 
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-
-            <a class="navbar-brand mx-lg-4 d-block d-lg-none" href="home-page.html">
-                <img src="Images/logo-navbar.svg">
+            <a class="navbar-brand mx-lg-5 d-block d-lg-none" href="index.html">
+                <img src="Images/logo-navbar.svg" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,20 +34,20 @@
             <div class="collapse navbar-collapse justify-content-lg-center" id="navbarNav">
                 <ul class="navbar-nav nav-menu-left justify-content-lg-end gap-lg-5">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="home-page.html">Acasă</a>
+                        <a class="nav-link" aria-current="page" href="index.html">Acasă</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="map.html">Izvoare</a>
+                        <a class="nav-link active" href="lista-izvoare.html">Izvoare</a>
                     </li>
                 </ul>
 
-                <a class="navbar-brand mx-lg-4 d-none d-lg-block" href="home-page.html">
-                    <img src="Images/logo-navbar.svg">
+                <a class="navbar-brand mx-lg-5 d-none d-lg-block" href="index.html">
+                    <img src="Images/logo-navbar.svg" />
                 </a>
 
                 <ul class="navbar-nav nav-menu-right gap-lg-5">
                     <li class="nav-item">
-                        <a class="nav-link" href="home-page.html#DespreNoi">Despre noi</a>
+                        <a class="nav-link" href="index.html#DespreNoi">Despre noi</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
@@ -59,113 +57,118 @@
         </div>
     </nav>
 
-    <!-- Aici se termina navbar-ul -->
+    <ul class="izvoare-tabs nav position-relative start-50 translate-middle-x d-inline-block py-lg-5 py-4"
+        id="sprint-tabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="btn rounded-pill btn-dark active" id="spring-map-button" data-bs-toggle="tab"
+                data-bs-target="#spring-map" type="button" role="tab" aria-controls="spring-map" aria-selected="true">
+                Vezi harta
+                <img src="Images/map-symbol.svg" alt="map-symbol" />
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="btn rounded-pill btn-dark" id="spring-list-button" data-bs-toggle="tab"
+                data-bs-target="#spring-list" type="button" role="tab" aria-controls="spring-list"
+                aria-selected="false">
+                Vezi lista
+                <img src="Images/list-symbol.svg" alt="list-symbol" />
+            </button>
+        </li>
+    </ul>
+    <div class="tab-content" id="spring-tabs-content">
+        <div class="tab-pane fade show active" id="spring-map" role="tabpanel" aria-labelledby="spring-map-button"
+            tabindex="0">
+            <div class="map-parent">
+                <div class="map-resposive map" id="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d87178.71452278309!2d26.29210352139449!3d46.935458010139804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47355449968fa865%3A0x52d3dedb49e2d0b8!2sPiatra%20Neam%C8%9B!5e0!3m2!1sro!2sro!4v1707913815848!5m2!1sro!2sro"
+                        width="300" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
 
-
-    <!--List of springs-->
-
-    <a class="btn rounded-pill btn-dark position-relative start-50 translate-middle-x button-map" id="buttonMap"
-        href="map.html"><b>Vezi harta</b> <img src="Images/map-symbol.svg" alt="map-symbol"></a>
-
-    <div class="container">
-
-        <div class="grid-cards">
-            <!-- Card Izvor 1 -->
-            <div class="overflow-hidden border-secondary card card-details" id="cardDetails">
-                <img src="Images/spring.png" class="img-spring-card" id="imgSpringCard1" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"><b>Nume Izvor - 1</b></h5>
-                    <p class="card-text">Locație:</p>
-                    <p class="card-text-km" id="cardTextKm1">123 Km</p>
-                    <img src="Images/heart-symbol.svg" class="position-absolute bottom-0 end-0 heart-card"
-                        id="heartCard1" alt="heart-symbol">
+                <!-- <template id="springMapItem"> -->
+                <div class="col spring-item-card spring-item-card-horizontal spring-item-card-map">
+                    <div class="spring-item-card-inner position-relative">
+                        <img src="Images/spring.png" class="spring-item-card-img springItemCardImg" alt="..." />
+                        <div class="spring-item-card-body">
+                            <div class="spring-item-card-content">
+                                <h5 class="spring-title fw-bold springItemCardContentTitle">
+                                    <a href="#"
+                                        class="stretched-link text-decoration-none link-dark springItemCardLink">
+                                        Lorem ipsum
+                                    </a>
+                                </h5>
+                                <div class="spring-description springItemCardContentDescription">
+                                    Lorem ipsum, dolor sit amet consectetur
+                                    adipisicing elit. Minima suscipit
+                                    commodi iste velit veniam. Aliquid
+                                    assumenda facilis natus non labore
+                                    repudiandae, magni corporis. Maiores,
+                                    neque. Odio veritatis eligendi sint cum?
+                                </div>
+                                <div class="spring-distance springItemCardContentDistance">
+                                    123 Km
+                                </div>
+                            </div>
+                            <button
+                                class="spring-heart-wrap btn p-1 border-0 rounded-3 btn-outline-light springItemCardHeart"
+                                data-liked="false" role="button" type="button">
+                                <img class="unliked" src="Images/heart-symbol.svg" />
+                                <img class="liked" src="Images/heart-symbol-liked.svg" />
+                                <span class="springItemCardHeartNumber">
+                                    0
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- </template> -->
+            </div>
+        </div>
+        <div class="tab-pane fade" id="spring-list" role="tabpanel" aria-labelledby="spring-list-button" tabindex="0">
+            <div class="container spring-list">
+                <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4" id="sprigList">
+                    <!-- Card Izvor 1 -->
+                    <!-- <template id="springListItem"> -->
+                    <div class="col spring-item-card">
+                        <div class="spring-item-card-inner position-relative">
+                            <img src="Images/spring.png" class="spring-item-card-img springItemCardImg" alt="..." />
+                            <div class="spring-item-card-body">
+                                <div class="spring-item-card-content">
+                                    <h5 class="spring-title fw-bold springItemCardContentTitle">
+                                        <a href="#"
+                                            class="stretched-link text-decoration-none link-dark springItemCardLink">
+                                            Lorem ipsum
+                                        </a>
+                                    </h5>
+                                    <div class="spring-description springItemCardContentDescription">
+                                        Lorem ipsum, dolor sit amet
+                                        consectetur adipisicing elit. Minima
+                                        suscipit commodi iste velit veniam.
+                                        Aliquid assumenda facilis natus non
+                                        labore repudiandae, magni corporis.
+                                        Maiores, neque. Odio veritatis
+                                        eligendi sint cum?
+                                    </div>
+                                    <div class="spring-distance springItemCardContentDistance">
+                                        123 Km
+                                    </div>
+                                </div>
+                                <button
+                                    class="spring-heart-wrap btn p-1 border-0 rounded-3 btn-outline-light springItemCardHeart"
+                                    data-liked="false" role="button" type="button">
+                                    <img class="unliked" src="Images/heart-symbol.svg" />
+                                    <img class="liked" src="Images/heart-symbol-liked.svg" />
+                                    <span class="springItemCardHeartNumber">
+                                        0
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- </template> -->
                 </div>
             </div>
-
-            <!-- Card Izvor 2 -->
-            <div class="overflow-hidden border-secondary card card-details" id="cardDetails">
-                <img src="Images/spring.png" class="img-spring-card" id="imgSpringCard2" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"><b>Nume Izvor - 2</b></h5>
-                    <p class="card-text">Locație:</p>
-                    <p class="card-text-km" id="cardTextKm2">123 Km</p>
-                    <img src="Images/heart-symbol.svg" class="position-absolute bottom-0 end-0 heart-card"
-                        id="heartCard2" alt="heart-symbol">
-                </div>
-            </div>
-
-            <!-- Card Izvor 3 -->
-            <div class="overflow-hidden border-secondary card card-details" id="cardDetails">
-                <img src="Images/spring.png" class="img-spring-card" id="imgSpringCard3" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"><b>Nume Izvor - 3</b></h5>
-                    <p class="card-text">Locație:</p>
-                    <p class="card-text-km" id="cardTextKm3">123 Km</p>
-                    <img src="Images/heart-symbol.svg" class="position-absolute bottom-0 end-0 heart-card"
-                        id="heartCard3" alt="heart-symbol">
-                </div>
-            </div>
-
-            <!-- Card Izvor 4 -->
-            <div class="overflow-hidden border-secondary card card-details" id="cardDetails">
-                <img src="Images/spring.png" class="img-spring-card" id="imgSpringCard4" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"><b>Nume Izvor - 4</b></h5>
-                    <p class="card-text">Locație:</p>
-                    <p class="card-text-km" id="cardTextKm4">123 Km</p>
-                    <img src="Images/heart-symbol.svg" class="position-absolute bottom-0 end-0 heart-card"
-                        id="heartCard4" alt="heart-symbol">
-                </div>
-            </div>
-
-            <!-- Card Izvor 5 -->
-            <div class="overflow-hidden border-secondary card card-details" id="cardDetails">
-                <img src="Images/spring.png" class="img-spring-card" id="imgSpringCard5" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"><b>Nume Izvor - 5</b></h5>
-                    <p class="card-text">Locație:</p>
-                    <p class="card-text-km" id="cardTextKm5">123 Km</p>
-                    <img src="Images/heart-symbol.svg" class="position-absolute bottom-0 end-0 heart-card"
-                        id="heartCard5" alt="heart-symbol">
-                </div>
-            </div>
-
-            <!-- Card Izvor 6 -->
-            <div class="overflow-hidden border-secondary card card-details" id="cardDetails">
-                <img src="Images/spring.png" class="img-spring-card" id="imgSpringCard6" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"><b>Nume Izvor - 6</b></h5>
-                    <p class="card-text">Locație:</p>
-                    <p class="card-text-km" id="cardTextKm6">123 Km</p>
-                    <img src="Images/heart-symbol.svg" class="position-absolute bottom-0 end-0 heart-card"
-                        id="heartCard6" alt="heart-symbol">
-                </div>
-            </div>
-
-            <!-- Card Izvor 7 -->
-            <div class="overflow-hidden border-secondary card card-details" id="cardDetails">
-                <img src="Images/spring.png" class="img-spring-card" id="imgSpringCard7" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"><b>Nume Izvor - 7</b></h5>
-                    <p class="card-text">Locație:</p>
-                    <p class="card-text-km" id="cardTextKm7">123 Km</p>
-                    <img src="Images/heart-symbol.svg" class="position-absolute bottom-0 end-0 heart-card"
-                        id="heartCard7" alt="heart-symbol">
-                </div>
-            </div>
-
-            <!-- Card Izvor 8 -->
-            <div class="overflow-hidden border-secondary card card-details" id="cardDetails">
-                <img src="Images/spring.png" class="img-spring-card" id="imgSpringCard8" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"><b>Nume Izvor - 8</b></h5>
-                    <p class="card-text">Locație:</p>
-                    <p class="card-text-km" id="cardTextKm8">123 Km</p>
-                    <img src="Images/heart-symbol.svg" class="position-absolute bottom-0 end-0 heart-card"
-                        id="heartCard8" alt="heart-symbol">
-                </div>
-            </div>
-
         </div>
     </div>
 
@@ -177,23 +180,39 @@
         <div class="project-section">
             <h2 class="unproiect">Un proiect:</h2>
             <div class="project-logos">
-                <img src="Images/10.png" alt="project_logo_1" class="img-fluid">
+                <img src="Images/10.png" alt="project_logo_1" class="img-fluid" />
                 <div class="black-bar"></div>
-                <img src="Images/9.png" alt="project_logo_2" class="img-fluid">
+                <img src="Images/9.png" alt="project_logo_2" class="img-fluid" />
             </div>
         </div>
 
         <div class="partners-section">
             <h2 class="unproiect">În parteneriat cu:</h2>
             <section class="partners-carousel slider" id="partnersCarousel">
-                <div class="slide"><img src="Images/1.png" alt="logo"></div>
-                <div class="slide"><img src="Images/2.png" alt="logo"></div>
-                <div class="slide"><img src="Images/3.png" alt="logo"></div>
-                <div class="slide"><img src="Images/4.png" alt="logo"></div>
-                <div class="slide"><img src="Images/5.png" alt="logo"></div>
-                <div class="slide"><img src="Images/6.png" alt="logo"></div>
-                <div class="slide"><img src="Images/7.png" alt="logo"></div>
-                <div class="slide"><img src="Images/8.png" alt="logo"></div>
+                <div class="slide">
+                    <img src="Images/1.png" alt="logo" />
+                </div>
+                <div class="slide">
+                    <img src="Images/2.png" alt="logo" />
+                </div>
+                <div class="slide">
+                    <img src="Images/3.png" alt="logo" />
+                </div>
+                <div class="slide">
+                    <img src="Images/4.png" alt="logo" />
+                </div>
+                <div class="slide">
+                    <img src="Images/5.png" alt="logo" />
+                </div>
+                <div class="slide">
+                    <img src="Images/6.png" alt="logo" />
+                </div>
+                <div class="slide">
+                    <img src="Images/7.png" alt="logo" />
+                </div>
+                <div class="slide">
+                    <img src="Images/8.png" alt="logo" />
+                </div>
             </section>
         </div>
     </div>
@@ -203,11 +222,12 @@
     <!-- Aici incepe zona pentru footer -->
 
     <footer>
-
-        <div class="container p-0">
+        <div class="container">
             <div class="footer-wid border-top border-danger pt-4 border-4">
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5">
-                    <div class="col col-md-3 mb-4 text-center logo"><img src="Images/Logo.svg"></div>
+                    <div class="col col-md-3 mb-4 text-center logo">
+                        <img src="Images/Logo.svg" />
+                    </div>
                     <div class="col col-md-3 mb-4 text-center">
                         <h4 class="h6">Urmărește-ne</h4>
                         <div class="social-icons">
@@ -237,7 +257,8 @@
         </div>
         <div class="footer-mobile-mountains d-block d-md-none"></div>
         <div class="copyright text-center py-3">
-            © <span class="current-year" id="currentYear">2024</span> Where IsVor. Toate drepturile rezervate.
+            © <span class="current-year" id="currentYear">2024</span> Where
+            IsVor. Toate drepturile rezervate.
         </div>
     </footer>
 
@@ -251,7 +272,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script src="https://kit.fontawesome.com/ff67e41739.js" crossorigin="anonymous"></script>
     <script src="slick.js"></script>
-
 </body>
 
 </html>

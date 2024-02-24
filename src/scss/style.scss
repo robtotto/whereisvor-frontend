@@ -1,11 +1,33 @@
 @import "../bootstrap/scss/functions";
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
 
-@import "variables"; 
+@import "variables";
 
 @import "../bootstrap/scss/variables";
 @import "../bootstrap/scss/variables-dark";
 @import "../bootstrap/scss/maps";
 @import "../bootstrap/scss/mixins";
 @import "../bootstrap/scss/root";
+
+// @import "../bootstrap/scss/reboot";
+// @import "../bootstrap/scss/button-group";
+// @import "../bootstrap/scss/buttons";
+// @import "../bootstrap/scss/close";
+// @import "../bootstrap/scss/containers";
+// @import "../bootstrap/scss/dropdown";
+// @import "../bootstrap/scss/forms";
+// @import "../bootstrap/scss/grid";
+// @import "../bootstrap/scss/helpers";
+// @import "../bootstrap/scss/images";
+// @import "../bootstrap/scss/nav";
+// @import "../bootstrap/scss/navbar";
+// @import "../bootstrap/scss/transitions";
+// @import "../bootstrap/scss/type";
+// @import "../bootstrap/scss/utilities";
+// @import "../bootstrap/scss/utilities/api";
 @import "../bootstrap/scss/bootstrap.scss";
+
+body {
+    background-color: $secondary;
+    overflow-x: hidden;
+}

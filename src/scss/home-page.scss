@@ -157,19 +157,21 @@ li {
 
 .despre-noi-text {
     color: $danger;
-    padding-left: 20%
+    padding-left: 20%;
 }
 
 .copyright {
     background-color: $light-emphasis;
 }
 
-@media (max-width: 575.98px) {
-    .home-detail>.container {
-        padding: 0;
-    }
+// @media (max-width: 575.98px) {
+//     .home-detail > .container {
+//         padding: 0;
+//     }
+    
+// }
 
-}
+// padding pe mobil, problema ^^
 
 @media screen and (max-width: 576px) {
     .centered-heading {
@@ -184,12 +186,16 @@ li {
 
 @media (max-width: 767.98px) {
     .detail-content {
-        background-image: linear-gradient($primary, rgba(138, 190, 255, 0));
-        padding: 1rem;
+            background-image: linear-gradient($primary, rgba(138, 190, 255, 0));
+            padding: 1rem;
     }
 
     .home-detail:before {
         display: none;
+    }
+
+    .ecrane-mici {
+        margin-top: 1.10rem;
     }
 
 }
@@ -253,8 +259,6 @@ li {
         margin-left: 0;
 
     }
-
-
 }
 
 @media (min-width: 2600px) {
@@ -271,10 +275,6 @@ li {
     }
 }
 
-.card-title {
-    margin-bottom: 30px;
-}
-
 .jos {
     margin-top: 20px;
 }
@@ -283,7 +283,30 @@ li {
     margin-bottom: 20px;
 }
 
-.despre-tech,
-.despre-dn {
-    padding-left: 50px;
+.despre-tech {
+    margin-bottom: 20px;
+    margin-left: 40px;
 } 
+
+.despre-tech2 {
+    margin-left: 30px;
+}
+
+.bg-desprenoi {
+    background-color: #fff;
+    border: rgb(0, 0, 0);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.img-stanga,
+.img-dreapta {
+    border-radius: 1rem;
+}
+
+.jos,
+.sus {
+    padding: 5px;
+}
