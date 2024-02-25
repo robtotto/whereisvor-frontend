@@ -20,21 +20,29 @@
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/nav-bar.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/lista-izvoare.css" />
-    <link rel="stylesheet" href="css/map-test-server.css" />
-    <!-- LIST SCRIPT -->
-    <script type="module" src="js/list.js"></script>
+      <link rel="stylesheet" href="css/style.css" />
+      <link rel="stylesheet" href="css/nav-bar.css" />
+      <link rel="stylesheet" href="css/footer.css" />
+      <link rel="stylesheet" href="css/lista-izvoare.css" />
+      <link rel="stylesheet" href="css/map-test-server.css" />
+    <!-- MAPBOX -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css" rel="stylesheet" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.js"></script>
+
+    <!-- MAP & LIST SCRIPT -->
+    <script type="module" defer src="js/map.js"></script>
+    <script type="module" defer src="js/list-updated.js"></script>
+  
+   
   </head>
+
   <body>
    <!-- Aici incepe navbar-ul -->
 
    <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
 
-        <a class="navbar-brand mx-lg-4 d-block d-lg-none" href="home-page.html">
+        <a class="navbar-brand mx-lg-4 d-block d-lg-none" href="index.html">
             <img src="Images/logo-navbar.svg">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -44,14 +52,14 @@
         <div class="collapse navbar-collapse justify-content-lg-center" id="navbarNav">
             <ul class="navbar-nav nav-menu-left justify-content-lg-end gap-lg-5">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="home-page.html">Acasă</a>
+                    <a class="nav-link active" aria-current="page" href="index.html">Acasă</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="map.html">Izvoare</a>
+                    <a class="nav-link" href="lista-izvoare.html">Izvoare</a>
                 </li>
             </ul>
 
-            <a class="navbar-brand mx-lg-4 d-none d-lg-block" href="home-page.html">
+            <a class="navbar-brand mx-lg-4 d-none d-lg-block" href="index.html">
                 <img src="Images/logo-navbar.svg">
             </a>
 
@@ -66,21 +74,126 @@
         </div>
     </div>
 </nav>
-
 <!-- Aici se termina navbar-ul -->
-    <!-- Lista de izvoare -->
-    <div class="container" id="grid-container">
-      <a
-        class="btn rounded-pill btn-dark position-relative start-50 translate-middle-x button-map"
-        id="buttonMap"
-        onclick="window.location.href = 'map.html';">
-        <b>Vezi harta</b>
-        <img src="Images/map-symbol.svg" alt="map-symbol" />
-      </a>
-      <div class="grid-cards">
-        <!-- Cardurile pentru izvoare generate din JS -->
+
+                             <!-- IZVOARE map/list-->
+
+<ul class="izvoare-tabs nav position-relative start-50 translate-middle-x d-inline-block py-lg-5 py-4"
+        id="sprint-tabs" role="tablist">
+        <!--Button Vezi harta--> 
+        <li class="nav-item" role="presentation">
+            <button class="btn rounded-pill btn-dark active" id="spring-map-button" data-bs-toggle="tab"
+                data-bs-target="#spring-map" type="button" role="tab" aria-controls="spring-map" aria-selected="true">
+                Vezi harta
+                <img src="Images/map-symbol.svg" alt="map-symbol" />
+            </button>
+        </li>
+         <!--Button Vezi lista-->   
+        <li class="nav-item" role="presentation">
+            <button class="btn rounded-pill btn-dark" id="spring-list-button" data-bs-toggle="tab"
+                data-bs-target="#spring-list" type="button" role="tab" aria-controls="spring-list"
+                aria-selected="false">
+                Vezi lista
+                <img src="Images/list-symbol.svg" alt="list-symbol" />
+            </button>
+        </li>
+    </ul>
+
+    <div class="tab-content" id="spring-tabs-content">
+      <div class="tab-pane fade show active" id="spring-map" role="tabpanel" aria-labelledby="spring-map-button"
+          tabindex="0">
+      <div class="map-parent">
+          <div class="map-resposive map" id="map">
+
+          <!-- //////////////////// Map GENERAT din JS /////////////////////////////
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d87178.71452278309!2d26.29210352139449!3d46.935458010139804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47355449968fa865%3A0x52d3dedb49e2d0b8!2sPiatra%20Neam%C8%9B!5e0!3m2!1sro!2sro!4v1707913815848!5m2!1sro!2sro" width="300" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          -->
+          </div>
+
+          <!-- <template id="springMapItem">
+            
+            //////////////////// List GENERAT din JS ///////////////////////////// 
+             
+          <div class="col spring-item-card spring-item-card-horizontal spring-item-card-map">
+              <div class="spring-item-card-inner position-relative">
+                  <img src="Images/spring.png" class="spring-item-card-img springItemCardImg" alt="...">
+                  <div class="spring-item-card-body">
+                      <div class="spring-item-card-content">
+                          <h5 class="spring-title fw-bold springItemCardContentTitle">
+                              <a href="#" class="stretched-link text-decoration-none link-dark springItemCardLink">
+                                  Lorem ipsum
+                              </a>
+                          </h5>
+                          <div class="spring-description springItemCardContentDescription">
+                              Lorem ipsum, dolor sit amet consectetur
+                              adipisicing elit. Minima suscipit
+                              commodi iste velit veniam. Aliquid
+                              assumenda facilis natus non labore
+                              repudiandae, magni corporis. Maiores,
+                              neque. Odio veritatis eligendi sint cum?
+                          </div>
+                          <div class="spring-distance springItemCardContentDistance">
+                              123 Km
+                          </div>
+                      </div>
+                      <button class="spring-heart-wrap btn p-1 border-0 rounded-3 btn-outline-light springItemCardHeart" data-liked="false" role="button" type="button">
+                          <img class="unliked" src="Images/heart-symbol.svg">
+                          <img class="liked" src="Images/heart-symbol-liked.svg">
+                          <span class="springItemCardHeartNumber">
+                              0
+                          </span>
+                      </button>
+                  </div>
+              </div>
+          </div>
+           </template> -->
       </div>
-    </div>
+  </div>
+  <div class="tab-pane fade active show" id="spring-list" role="tabpanel" aria-labelledby="spring-list-button" tabindex="0">
+      <div class="container spring-list">
+          <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4" id="springList">
+              <!-- Card Izvor 1 --> 
+
+    <!--<template id="springListItem"> 
+              <div class="col spring-item-card">
+                  <div class="spring-item-card-inner position-relative">
+                      <img src="Images/spring.png" class="spring-item-card-img springItemCardImg" alt="...">
+                      <div class="spring-item-card-body">
+                          <div class="spring-item-card-content">
+                              <h5 class="spring-title fw-bold springItemCardContentTitle">
+                                  <a href="#" class="stretched-link text-decoration-none link-dark springItemCardLink">
+                                      Lorem ipsum
+                                  </a>
+                              </h5>
+                              <div class="spring-description springItemCardContentDescription">
+                                  Lorem ipsum, dolor sit amet
+                                  consectetur adipisicing elit. Minima
+                                  suscipit commodi iste velit veniam.
+                                  Aliquid assumenda facilis natus non
+                                  labore repudiandae, magni corporis.
+                                  Maiores, neque. Odio veritatis
+                                  eligendi sint cum?
+                              </div>
+                              <div class="spring-distance springItemCardContentDistance">
+                                  123 Km
+                              </div>
+                          </div>
+                          <button class="spring-heart-wrap btn p-1 border-0 rounded-3 btn-outline-light springItemCardHeart" data-liked="false" role="button" type="button">
+                              <img class="unliked" src="Images/heart-symbol.svg">
+                              <img class="liked" src="Images/heart-symbol-liked.svg">
+                              <span class="springItemCardHeartNumber">
+                                  0
+                              </span>
+                          </button>
+                      </div>
+                  </div>
+              </div>
+               </template> -->
+        
+          </div>
+      </div>
+  </div>
+</div>
 
     <!--  Zona despre parteneri si cine a facut proiectul -->
 

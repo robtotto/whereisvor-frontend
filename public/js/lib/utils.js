@@ -113,4 +113,5 @@ export async function updateLikeCounter(id, springToUpdate) {
 
   const data = await res.json();
   console.log(data);
+  return data;
 }

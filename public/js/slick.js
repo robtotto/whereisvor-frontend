@@ -9,15 +9,24 @@ $(document).ready(function () {
         pauseOnHover: true,
         responsive: [
             {
-                breakpoint: 768,
+                breakpoint: 992,
                 settings: {
-                    slidesToShow: 2
+                    slidesToShow: 2,
+                    arrows: false,
                 }
             },
             {
-                breakpoint: 520,
+                breakpoint: 768,
                 settings: {
-                    slidesToShow: 2
+                    slidesToShow: 2,
+                    arrows: false,
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 2,
+                    arrows: false,
                 }
             }
         ]
@@ -28,7 +37,7 @@ $(document).ready(function () {
 $(document).ready(function(){
 $('.carousel-GT').slick({
 dots: true,
-autoplay: false,
+autoplay: true,
 infinite: true,
 speed: 300,
 slidesToShow: 1,

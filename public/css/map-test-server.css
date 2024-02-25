@@ -1,115 +1,77 @@
 /* Map pop-up template */
 
 .mapboxgl-popup {
-  position: absolute;
-  z-index: 2 !important;
-  max-width: 275px !important;
-  max-height: 120px;
-  bottom: 0;
-}
-
-.mapboxgl-popup .card-title {
-  margin-bottom: 14px !important;
-}
-
-.mapboxgl-popup .card-text-km {
-  font-size: 12px !important;
-}
-
-#popup-card p {
-  font-size: 12px;
-}
-
-.mapboxgl-popup-close-button {
-  position: absolute;
-  top: 5px !important;
-  right: 12px !important;
-  color: #111111;
-  border: none;
-  padding: 5px;
-  background: transparent !important;
-}
-
-/* Heart likes */
-
-.heart-card {
-  max-width: 30px;
-  max-height: 30px;
-  margin-bottom: 0;
-  margin-right: 0;
-  margin-left: 5px;
-  margin-top: 5px;
-}
-
-.heart-container {
-  position: relative;
-  margin-top: 7px;
-}
-
-.like-counter {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  font-size: 9px;
-}
-
-@media (max-width: 767.98px) {
-  #popup-card {
-    max-width: 175px !important;
-    max-height: 70px;
+    position: absolute;
+    z-index:2 !important;
+    max-width:275px !important;
+    max-height: 120px;
+    bottom:0
   }
-
-  #popup-card .card-title {
-    font-size: 16px;
-    margin-bottom: 5px !important;
+  
+  .mapboxgl-popup .card-title {
+    margin-bottom: 14px !important;
   }
-
+  
+  .mapboxgl-popup .card-text-km {
+    font-size: 12px !important;
+  }
+  
+  #popup-card p {
+    font-size:12px;
+  }
+  
+  .mapboxgl-popup-content {
+    background: transparent !important;
+  }
+  
+  .mapboxgl-popup-close-button {
+    position: absolute; 
+    top: 5px !important; 
+    right: 12px !important; 
+    color: #111111; 
+    border: none; 
+    padding: 5px;
+    background: transparent !important;
+  }
+  
+  /* Heart likes */
+  
   .heart-card {
-    max-width: 20px;
-    max-height: 20px;
+    max-width:30px;
+    max-height: 30px;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-left:5px;
+    margin-top:5px
   }
-}
-/* ///////////////////////////////////////////////// */
-.mapboxgl-popup-content {
-  width: 350px;
-}
-
-.popup__card {
-  display: flex;
-
-  gap: 1rem;
-  /* overflow: hidden; */
-  align-items: center;
-}
-
-.popup__card--image {
-  align-self: stretch;
-}
-
-.popup__card--image img {
-  width: 120px;
-  height: 100%;
-  object-fit: cover;
-}
-
-.popup__card--content {
-  display: flex;
-  flex: 1 1 0%;
-  flex-direction: column;
-}
-
-.popup__card--content h4 {
-  font-size: 20px;
-  margin-bottom: 1rem;
-}
-
-.popup__card--content p {
-  font-size: 16px;
-}
-
-.popup__card--heart {
-  height: 40px;
-  width: 40px;
-  align-self: end;
-  cursor: pointer;
-}
+  
+  .heart-container{
+    position: relative;
+    margin-top: 7px;
+  }
+  
+  .like-counter{
+    position:absolute;
+    right:0;
+    bottom:0;
+    font-size: 9px;
+  }
+  
+  
+  @media (max-width: 767.98px) {
+    #popup-card {
+      max-width:175px !important;
+      max-height: 70px;
+    }
+  
+    #popup-card .card-title {
+      font-size: 16px;
+      margin-bottom: 5px !important;
+    }   
+  
+    .heart-card {
+      max-width:20px;
+      max-height: 20px;
+    }
+    
+  }
