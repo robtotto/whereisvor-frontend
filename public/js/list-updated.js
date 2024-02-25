@@ -100,7 +100,7 @@ const createCard = item => {
     likeBtn.addEventListener('click', async function () {
 
         // dezactivare buton likes (pana implementam unlike)
-       likeBtn.disabled = true;
+       //likeBtn.disabled = true;
 
         const springId = this.dataset.id; 
         const springToUpdate = springs.find(spring => spring.id === springId);
