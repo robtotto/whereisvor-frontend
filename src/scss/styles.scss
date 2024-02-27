@@ -1,0 +1,11 @@
+// Import all of Bootstrap's CSS
+@import 'bootstrap/scss/bootstrap';
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+@import 'variables';
+
+body {
+  background-color: $secondary;
+  overflow-x: hidden;
+}
