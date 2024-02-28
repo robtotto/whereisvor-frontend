@@ -10,15 +10,14 @@ import {
 } from './lib/utils.js';
 
 // fetching springs data
-// const springs = await getSprings();
+const springs = await getSprings();
 
 // Default user coords (somewhere in Piatra Neamt):
 let lng = 26.366689;
 let lat = 46.930792;
 
 // Add map to page:
-mapboxgl.accessToken =
-  'pk.eyJ1IjoicmFkdWZpbGkiLCJhIjoiY2xzNGp2MTN5MWVldTJqb2UzbDVhNWhobyJ9.JyqZzFSgW4xiWNn6nwXkXw';
+mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN;
 
 const map = new mapboxgl.Map({
   container: 'map',

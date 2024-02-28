@@ -1,7 +1,10 @@
+import * as bootstrap from 'bootstrap';
+
 // https://whereisvor-server.up.railway.app/api/v1/water-sources
+
 export async function getSprings() {
   try {
-    const res = await fetch('https://whereisvor-server.up.railway.app/api/v1/water-sources');
+    const res = await fetch('https://proxy-spring.onrender.com/proxy');
     const data = await res.json();
     return data;
   } catch (error) {
