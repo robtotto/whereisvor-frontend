@@ -55,9 +55,6 @@ if (navigator.geolocation) {
             const popupContent = document.createElement('div');
             popupContent.innerHTML = `       
         <div class="popup__card">
-            <div class="popup__card--image">
-                <img src="${spring.image}" alt="img">
-            </div>
             <div class="popup__card--content">
                 <h4>${spring.name}</h4>
                 <p>${distance} km</p>
@@ -111,9 +108,6 @@ springs.forEach(spring => {
   const popupContent = document.createElement('div');
   popupContent.innerHTML = `       
 <div class="popup__card">
-  <div class="popup__card--image">
-      <img src="${spring.image}" alt="img">
-  </div>
   <div class="popup__card--content">
       <h4>${spring.name}</h4>
       <img
