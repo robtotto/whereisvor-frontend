@@ -17,7 +17,7 @@ export async function getDistanceToWaterSpring(userLng, userLat, targetSpring) {
   try {
     // get distance
     const response = await fetch(
-      `https://api.mapbox.com/directions/v5/mapbox/walking/${userLng},${userLat};${targetSpring.coordinate[0]},${targetSpring.coordinate[1]}?alternatives=false&geometries=geojson&overview=simplified&steps=false&access_token=pk.eyJ1IjoiYm9nZGFuLTI4IiwiYSI6ImNsczNobDdicDB5cWcydm1lOGtnMXZjYWkifQ.UI-Umu7Pb1hHE2ZsQ7DYBQ`
+      `https://api.mapbox.com/directions/v5/mapbox/walking/${userLng},${userLat};${targetSpring.longitude},${targetSpring.latitude}?alternatives=false&geometries=geojson&overview=simplified&steps=false&access_token=pk.eyJ1IjoiYm9nZGFuLTI4IiwiYSI6ImNsczNobDdicDB5cWcydm1lOGtnMXZjYWkifQ.UI-Umu7Pb1hHE2ZsQ7DYBQ`
     );
 
     const data = await response.json();
