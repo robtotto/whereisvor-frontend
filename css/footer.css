@@ -1,5 +1,5 @@
 :root {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif !important;
 }
 
 .copyright {
@@ -13,28 +13,28 @@
 
 .project-section {
   text-align: center;
-  padding-bottom: 30px;
 }
 
 .project-section h2 {
   font-size: 24px;
   color: #292929;
+  margin: 0;
 }
 
 .unproiect {
-  padding-bottom: 30px;
+  padding-bottom: 40px;
   padding-top: 60px;
 }
 
 .unproiect-text {
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 
 .project-logos {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
+  padding-bottom: 40px;
 }
 
 .project-logos img {
@@ -61,7 +61,7 @@
 .partners-section h2 {
   font-size: 24px;
   color: #333;
-  margin-bottom: 15px;
+  margin: 0;
 }
 
 .partners-section .slick-slide {
