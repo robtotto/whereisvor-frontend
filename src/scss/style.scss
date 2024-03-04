@@ -31,3 +31,83 @@ body {
     background-color: $secondary;
     overflow-x: hidden;
 }
+
+.spring-heart-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $danger;
+    font-weight: bold;
+    position: relative;
+    z-index: 5;
+
+    img {
+        width: 37px;
+        height: 40px;
+    }
+
+    img.liked {
+        display: none;
+    }
+    img.unliked {
+        display: block;
+    }
+
+    &[data-liked="true"] {
+        img.liked {
+            display: block;
+        }
+        img.unliked {
+            display: none;
+        }
+    }
+
+    &.spring-heart-horizontal {
+        flex-direction: row;
+
+        img {
+            margin-right: 5px;
+        }
+    }
+}
+
+.map-responsive {
+    overflow: hidden;
+    position: relative;
+
+    #map {
+        // position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 70vh;
+        min-height: 400px;
+    }
+
+    #marker {
+        background-color: $danger;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .mapboxgl-popup {
+        max-width: 300px;
+
+        .spring-map-marker-popup {
+            padding: 10px 5px 0 5px;
+
+            a {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+
+                img {
+                    width: auto;
+                    height: 0.8rem;
+                }
+            }
+        }
+    }
+}

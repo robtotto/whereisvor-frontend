@@ -1,116 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>404</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/home-page.css" />
+        <link rel="stylesheet" href="css/footer.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/home-page.css">
-    <link rel="stylesheet" href="css/footer.css">
-</head>
-
-<body>
-
-    <nav class="navbar sticky-top navbar-expand-lg">
-        <div class="container-fluid">
-
-            <a class="navbar-brand mx-lg-5 d-block d-lg-none" href="index.html">
-                <img src="Images/logo-navbar.svg">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-lg-center" id="navbarNav">
-                <ul class="navbar-nav nav-menu-left justify-content-lg-end gap-lg-5">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Acasă</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="lista-izvoare.html">Izvoare</a>
-                    </li>
-                </ul>
-
-                <a class="navbar-brand mx-lg-5 d-none d-lg-block" href="index.html">
-                    <img src="Images/logo-navbar.svg">
+    <body>
+        <nav class="navbar sticky-top navbar-expand-lg">
+            <div class="container-fluid">
+                <a
+                    class="navbar-brand mx-lg-5 d-block d-lg-none"
+                    href="index.html"
+                >
+                    <img src="images/logo-navbar.svg" />
                 </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                    class="collapse navbar-collapse justify-content-lg-center"
+                    id="navbarNav"
+                >
+                    <ul
+                        class="navbar-nav nav-menu-left justify-content-lg-end gap-lg-5"
+                    >
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active"
+                                aria-current="page"
+                                href="index.html"
+                                >Acasă</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="lista-izvoare.html"
+                                >Izvoare</a
+                            >
+                        </li>
+                    </ul>
 
-                <ul class="navbar-nav nav-menu-right gap-lg-5">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#DespreNoi">Despre noi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
+                    <a
+                        class="navbar-brand mx-lg-5 d-none d-lg-block"
+                        href="index.html"
+                    >
+                        <img src="images/logo-navbar.svg" />
+                    </a>
+
+                    <ul class="navbar-nav nav-menu-right gap-lg-5">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#DespreNoi"
+                                >Despre noi</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div
+            class="d-flex flex-column align-items-center justify-content-center vh-100"
+        >
+            <img
+                src="images/error_image.svg"
+                alt="Error Image"
+                width="200"
+                height="200"
+            />
+            <div class="text-center mt-4">
+                <h1 class="display-1 mt-2 culoare-text">404</h1>
+                <p class="fs-3 mt-4 fw-bolder culoare-text">
+                    Oops! Ai ajuns pe o pagină care nu există.
+                </p>
+                <p class="lead mt-4 fw-bolder culoare-text">
+                    Asigură-te că link-ul este corect și încearcă din nou.
+                </p>
             </div>
         </div>
-    </nav>
 
-    <div class="d-flex flex-column align-items-center justify-content-center vh-100">
-        <img src="Images/error_image.svg" alt="Error Image" width="200" height="200">
-        <div class="text-center mt-4">
-            <h1 class="display-1 mt-2 culoare-text">404</h1>
-            <p class="fs-3 mt-4 fw-bolder culoare-text">Oops! Ai ajuns pe o pagină care nu există.</p>
-            <p class="lead mt-4 fw-bolder culoare-text">
-                Asigură-te că link-ul este corect și încearcă din nou.
-            </p>
-        </div>
-    </div>
+        <!-- Aici incepe zona pentru footer -->
 
-    <!-- Aici incepe zona pentru footer -->
-
-    <footer>
-
-        <div class="container">
-            <div class="footer-wid border-top border-danger pt-4 border-4">
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5">
-                    <div class="col col-md-3 mb-4 text-center logo"><img src="Images/Logo.svg"></div>
-                    <div class="col col-md-3 mb-4 text-center">
-                        <h4 class="h6">Urmărește-ne</h4>
-                        <div class="social-icons">
-                            <a href="https://www.instagram.com/generatia_tech/" target="_blank" class="social-icon"><i
-                                    class="fab fa-instagram fa-2x"></i></a>
-                            <a href="https://www.facebook.com/generatiatech.ro" target="_blank" class="social-icon"><i
-                                    class="fab fa-facebook fa-2x"></i></a>
-                            <a href="https://www.tiktok.com/@generatia.tech" target="_blank" class="social-icon"><i
-                                    class="fab fa-tiktok fa-2x"></i></a>
+        <footer>
+            <div class="container">
+                <div class="footer-wid border-top border-danger pt-4 border-4">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5">
+                        <div class="col col-md-3 mb-4 text-center logo">
+                            <img src="images/Logo.svg" />
                         </div>
-                    </div>
-                    <div class="col col-md-3 mb-4 text-center">
-                        <h4 class="h6">Links parteneri</h4>
-                        <ul class="list-unstyled footer-li">
-                            <li><a href="https://generatiatech.ro/" target="_blank">Generația Tech</a></li>
-                            <li><a href="https://digitalnation.ro/" target="_blank">Digital Nation</a></li>
-                            <li><a href="https://www.pentalog.com/" target="_blank">Pentalog</a></li>
-                            <li><a href="https://www.primariapn.ro/" target="_blank">Primăria Piatra Neamț</a></li>
-                        </ul>
-                    </div>
-                    <div class="col col-md-3 mb-4 text-center">
-                        <h4 class="h6">Linkuri utile</h4>
-                        <ul class="list-unstyled footer-li">
-                            <li><a href="#" target="_blank">Termeni și condiții</a></li>
-                            <li><a href="#" target="_blank">Politică de cookies</a></li>
-                        </ul>
+                        <div class="col col-md-3 mb-4 text-center">
+                            <h4 class="h6">Urmărește-ne</h4>
+                            <div class="social-icons">
+                                <a
+                                    href="https://www.instagram.com/generatia_tech/"
+                                    target="_blank"
+                                    class="social-icon"
+                                    ><i class="fab fa-instagram fa-2x"></i
+                                ></a>
+                                <a
+                                    href="https://www.facebook.com/generatiatech.ro"
+                                    target="_blank"
+                                    class="social-icon"
+                                    ><i class="fab fa-facebook fa-2x"></i
+                                ></a>
+                                <a
+                                    href="https://www.tiktok.com/@generatia.tech"
+                                    target="_blank"
+                                    class="social-icon"
+                                    ><i class="fab fa-tiktok fa-2x"></i
+                                ></a>
+                            </div>
+                        </div>
+                        <div class="col col-md-3 mb-4 text-center">
+                            <h4 class="h6">Links parteneri</h4>
+                            <ul class="list-unstyled footer-li">
+                                <li>
+                                    <a
+                                        href="https://generatiatech.ro/"
+                                        target="_blank"
+                                        >Generația Tech</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://digitalnation.ro/"
+                                        target="_blank"
+                                        >Digital Nation</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.pentalog.com/"
+                                        target="_blank"
+                                        >Pentalog</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.primariapn.ro/"
+                                        target="_blank"
+                                        >Primăria Piatra Neamț</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col col-md-3 mb-4 text-center">
+                            <h4 class="h6">Linkuri utile</h4>
+                            <ul class="list-unstyled footer-li">
+                                <li>
+                                    <a href="#" target="_blank"
+                                        >Termeni și condiții</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        >Politică de cookies</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="footer-mobile-mountains d-block d-md-none"></div>
-        <div class="copyright text-center py-3">
-            © <span class="current-year" id="currentYear">2024</span> Where IsVor. Toate drepturile rezervate.
-        </div>
-    </footer>
+            <div class="footer-mobile-mountains d-block d-md-none"></div>
+            <div class="copyright text-center py-3">
+                © <span class="current-year" id="currentYear">2024</span> Where
+                IsVor. Toate drepturile rezervate.
+            </div>
+        </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <script src="https://kit.fontawesome.com/ff67e41739.js" crossorigin="anonymous"></script>
-    <script src="slick.js"></script>
-
-</body>
-
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+        <script
+            src="https://kit.fontawesome.com/ff67e41739.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="slick.js"></script>
+    </body>
 </html>

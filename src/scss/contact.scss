@@ -11,7 +11,7 @@ body {
 }
 
 .contact-form_image {
-    background-image: url("../Images/harta-contact.svg");
+    background-image: url("../images/harta-contact.svg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -40,12 +40,12 @@ body {
     justify-content: center;
     align-items: center;
     min-height: calc(16px + 2rem);
-    
+
     margin: 0;
     padding: 1rem 0;
-    
+
     list-style-type: none;
-    
+
     li {
         margin: 0 0.25rem;
     }
@@ -56,11 +56,11 @@ body {
         height: 10px;
         padding: 0;
         transition: all 0.5s ease-in-out;
-        
+
         border: none;
         border-radius: 100%;
         background-color: #126704;
-        
+
         text-indent: -9999px;
     }
 
@@ -68,7 +68,6 @@ body {
         background-color: #126704;
         transform: scale(2);
     }
-    
 }
 
 .slide-dots-GT li.slick-active button {
@@ -125,7 +124,7 @@ body {
     }
 
     .team-webdesign {
-        margin-right: 0 !important; 
+        margin-right: 0 !important;
     }
 
     .team-webdevs {

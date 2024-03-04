@@ -1,277 +1,448 @@
 <!DOCTYPE html>
 <html lang="ro-RO">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Listă Izvoare</title>
+        <!-- Fisiere de CSS externe. Styles, Slick, etc. -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+            integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/nav-bar.css" />
+        <link rel="stylesheet" href="css/lista-izvoare.css" />
+        <link rel="stylesheet" href="css/footer.css" />
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Listă Izvoare</title>
-    <!-- Fisiere de CSS externe. Styles, Slick, etc. -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
-        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/nav-bar.css" />
-    <link rel="stylesheet" href="css/lista-izvoare.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-</head>
+        <link
+            href="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css"
+            rel="stylesheet"
+        />
+        <script src="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.js"></script>
+    </head>
 
-<body>
-    <!--Navbar-->
+    <body>
+        <!--Navbar-->
 
-    <!-- Aici incepe navbar-ul -->
+        <!-- Aici incepe navbar-ul -->
 
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand mx-lg-5 d-block d-lg-none" href="index.html">
-                <img src="Images/logo-navbar.svg" />
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-lg-center" id="navbarNav">
-                <ul class="navbar-nav nav-menu-left justify-content-lg-end gap-lg-5">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html">Acasă</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="lista-izvoare.html">Izvoare</a>
-                    </li>
-                </ul>
-
-                <a class="navbar-brand mx-lg-5 d-none d-lg-block" href="index.html">
-                    <img src="Images/logo-navbar.svg" />
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a
+                    class="navbar-brand mx-lg-5 d-block d-lg-none"
+                    href="index.html"
+                >
+                    <img src="images/logo-navbar.svg" />
                 </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                    class="collapse navbar-collapse justify-content-lg-center"
+                    id="navbarNav"
+                >
+                    <ul
+                        class="navbar-nav nav-menu-left justify-content-lg-end gap-lg-5"
+                    >
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                aria-current="page"
+                                href="index.html"
+                                >Acasă</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="lista-izvoare.html"
+                                >Izvoare</a
+                            >
+                        </li>
+                    </ul>
 
-                <ul class="navbar-nav nav-menu-right gap-lg-5">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#DespreNoi">Despre noi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+                    <a
+                        class="navbar-brand mx-lg-5 d-none d-lg-block"
+                        href="index.html"
+                    >
+                        <img src="images/logo-navbar.svg" />
+                    </a>
 
-    <ul class="izvoare-tabs nav position-relative start-50 translate-middle-x d-inline-block py-lg-5 py-4"
-        id="sprint-tabs" role="tablist">
-        <li class="nav-item" role="presentation">
-            <button class="btn rounded-pill btn-dark active" id="spring-map-button" data-bs-toggle="tab"
-                data-bs-target="#spring-map" type="button" role="tab" aria-controls="spring-map" aria-selected="true">
-                Vezi harta
-                <img src="Images/map-symbol.svg" alt="map-symbol" />
-            </button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="btn rounded-pill btn-dark" id="spring-list-button" data-bs-toggle="tab"
-                data-bs-target="#spring-list" type="button" role="tab" aria-controls="spring-list"
-                aria-selected="false">
-                Vezi lista
-                <img src="Images/list-symbol.svg" alt="list-symbol" />
-            </button>
-        </li>
-    </ul>
-    <div class="tab-content" id="spring-tabs-content">
-        <div class="tab-pane fade show active" id="spring-map" role="tabpanel" aria-labelledby="spring-map-button"
-            tabindex="0">
-            <div class="map-parent">
-                <div class="map-resposive map" id="map">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d87178.71452278309!2d26.29210352139449!3d46.935458010139804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47355449968fa865%3A0x52d3dedb49e2d0b8!2sPiatra%20Neam%C8%9B!5e0!3m2!1sro!2sro!4v1707913815848!5m2!1sro!2sro"
-                        width="300" height="450" style="border: 0" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <ul class="navbar-nav nav-menu-right gap-lg-5">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#DespreNoi"
+                                >Despre noi</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
                 </div>
+            </div>
+        </nav>
 
-                <!-- <template id="springMapItem"> -->
-                <div class="col spring-item-card spring-item-card-horizontal spring-item-card-map">
-                    <div class="spring-item-card-inner position-relative">
-                        <img src="Images/spring.png" class="spring-item-card-img springItemCardImg" alt="..." />
-                        <div class="spring-item-card-body">
-                            <div class="spring-item-card-content">
-                                <h5 class="spring-title fw-bold springItemCardContentTitle">
-                                    <a href="#"
-                                        class="stretched-link text-decoration-none link-dark springItemCardLink">
-                                        Lorem ipsum
-                                    </a>
-                                </h5>
-                                <div class="spring-description springItemCardContentDescription">
-                                    Lorem ipsum, dolor sit amet consectetur
-                                    adipisicing elit. Minima suscipit
-                                    commodi iste velit veniam. Aliquid
-                                    assumenda facilis natus non labore
-                                    repudiandae, magni corporis. Maiores,
-                                    neque. Odio veritatis eligendi sint cum?
-                                </div>
-                                <div class="spring-distance springItemCardContentDistance">
-                                    123 Km
-                                </div>
+        <ul
+            class="izvoare-tabs nav position-relative start-50 translate-middle-x d-inline-block"
+            id="spring-tabs"
+            role="tablist"
+        >
+            <li class="nav-item" role="presentation">
+                <button
+                    class="btn rounded-pill btn-dark active"
+                    id="spring-map-button"
+                    data-bs-toggle="tab"
+                    data-bs-target="#spring-map"
+                    type="button"
+                    role="tab"
+                    aria-controls="spring-map"
+                    aria-selected="true"
+                >
+                    Vezi harta
+                    <img src="images/map-symbol.svg" alt="map-symbol" />
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button
+                    class="btn rounded-pill btn-dark"
+                    id="spring-list-button"
+                    data-bs-toggle="tab"
+                    data-bs-target="#spring-list"
+                    type="button"
+                    role="tab"
+                    aria-controls="spring-list"
+                    aria-selected="false"
+                >
+                    Vezi lista
+                    <img src="images/list-symbol.svg" alt="list-symbol" />
+                </button>
+            </li>
+        </ul>
+
+        <!-- Pagina harta -->
+        <div class="tab-content" id="spring-tabs-content">
+            <div
+                class="tab-pane fade show active"
+                id="spring-map"
+                role="tabpanel"
+                aria-labelledby="spring-map-button"
+                tabindex="0"
+            >
+                <!-- Card pin-harta -->
+                <template id="springMapMarkerPopup">
+                    <div class="spring-map-marker-popup text-center">
+                        <div>
+                            <div class="fw-bold h6 mb-3 springTitle">
+                                Izvorul Slatina Gârcina
                             </div>
-                            <button
-                                class="spring-heart-wrap btn p-1 border-0 rounded-3 btn-outline-light springItemCardHeart"
-                                data-liked="false" role="button" type="button">
-                                <img class="unliked" src="Images/heart-symbol.svg" />
-                                <img class="liked" src="Images/heart-symbol-liked.svg" />
-                                <span class="springItemCardHeartNumber">
-                                    0
-                                </span>
-                            </button>
                         </div>
+                        <a
+                            href="#"
+                            class="btn btn-success rounded-pill btn-sm px-3 springSingleUrl"
+                        >
+                            <b>Vezi Izvorul</b>
+                            <img src="images/arrow-pin-card.svg" />
+                        </a>
                     </div>
+                </template>
+
+                <div class="map-responsive map">
+                    <div id="map"></div>
+                    <script>
+                        // TO MAKE THE MAP APPEAR YOU MUST
+                        // ADD YOUR ACCESS TOKEN FROM
+                        // https://account.mapbox.com
+                        mapboxgl.accessToken =
+                            "pk.eyJ1IjoiZG1pdHJpZ29yb2JpY2RpZ2l0YWxuYXRpb24iLCJhIjoiY2x0ZGJobHozMDQ3NDJycGJlcGxtank1YiJ9.TPkkgQWM0pr4iIRU0dG0yg";
+                        const spring = [-77.0353, 38.8895];
+                        const map = new mapboxgl.Map({
+                            container: "map",
+                            // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+                            style: "mapbox://styles/mapbox/streets-v12",
+                            center: spring,
+                            zoom: 10,
+                            cooperativeGestures: true,
+                        });
+
+                        let popupContent = document.getElementById(
+                            "springMapMarkerPopup"
+                        );
+
+                        // create the popup
+                        const popup = new mapboxgl.Popup({
+                            closeOnClick: false,
+                            offset: 7,
+                        }).setHTML(popupContent.innerHTML);
+
+                        // create DOM element for the marker
+                        const el = document.createElement("div");
+                        el.id = "marker";
+
+                        // create the marker
+                        new mapboxgl.Marker(el)
+                            .setLngLat(spring)
+                            .setPopup(popup) // sets a popup on this marker
+                            .addTo(map);
+                    </script>
                 </div>
-                <!-- </template> -->
             </div>
-        </div>
-        <div class="tab-pane fade" id="spring-list" role="tabpanel" aria-labelledby="spring-list-button" tabindex="0">
-            <div class="container spring-list">
-                <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4" id="sprigList">
-                    <!-- Card Izvor 1 -->
-                    <!-- <template id="springListItem"> -->
-                    <div class="col spring-item-card">
-                        <div class="spring-item-card-inner position-relative">
-                            <img src="Images/spring.png" class="spring-item-card-img springItemCardImg" alt="..." />
-                            <div class="spring-item-card-body">
-                                <div class="spring-item-card-content">
-                                    <h5 class="spring-title fw-bold springItemCardContentTitle">
-                                        <a href="#"
+
+            <!-- Pagina lista izvoare -->
+            <div
+                class="tab-pane fade"
+                id="spring-list"
+                role="tabpanel"
+                aria-labelledby="spring-list-button"
+                tabindex="0"
+            >
+                <div class="container spring-list">
+                    <div
+                        class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4"
+                        id="sprigList"
+                    >
+                        <!-- Lista card-uri izvoare -->
+                        <!-- Card Izvor 1 -->
+                        <!-- <template id="springListItem"> -->
+                        <div class="col spring-item-card">
+                            <div
+                                class="spring-item-card-inner position-relative"
+                            >
+                                <img
+                                    src="images/img-no-preview-available.svg"
+                                    class="spring-item-card-img springItemCardImg"
+                                    alt="..."
+                                />
+                                <div class="spring-item-card-body">
+                                    <div class="spring-item-card-content">
+                                        <a
+                                            href="#"
                                             class="stretched-link text-decoration-none link-dark springItemCardLink">
-                                            Lorem ipsum
+                                            <h5
+                                                class="spring-title fw-bold springItemCardContentTitle">
+                                                Izvorul Baraj
+                                            </h5>
                                         </a>
-                                    </h5>
-                                    <div class="spring-description springItemCardContentDescription">
-                                        Lorem ipsum, dolor sit amet
-                                        consectetur adipisicing elit. Minima
-                                        suscipit commodi iste velit veniam.
-                                        Aliquid assumenda facilis natus non
-                                        labore repudiandae, magni corporis.
-                                        Maiores, neque. Odio veritatis
-                                        eligendi sint cum?
+                                        <div class="spring-coordinates">
+                                            <div class="springCoordinatesLat">
+                                                46°55'07.7"N
+                                            </div>
+                                            <div class="springCoordinatesLon">
+                                                26°21'06.1"E
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="spring-distance springItemCardContentDistance">
+                                            Nu avem localizare
+                                        </div>
                                     </div>
-                                    <div class="spring-distance springItemCardContentDistance">
-                                        123 Km
-                                    </div>
+                                    <button
+                                        class="spring-heart-wrap btn p-1 border-0 rounded-3 btn-outline-light springItemCardHeart"
+                                        data-liked="true"
+                                        role="button"
+                                        type="button">
+                                        <img
+                                            class="unliked"
+                                            src="images/heart-symbol.svg"/>
+                                        <img
+                                            class="liked"
+                                            src="images/heart-symbol-liked.svg"/>
+                                        <span class="springItemCardHeartNumber">
+                                            0
+                                        </span>
+                                    </button>
                                 </div>
-                                <button
-                                    class="spring-heart-wrap btn p-1 border-0 rounded-3 btn-outline-light springItemCardHeart"
-                                    data-liked="false" role="button" type="button">
-                                    <img class="unliked" src="Images/heart-symbol.svg" />
-                                    <img class="liked" src="Images/heart-symbol-liked.svg" />
-                                    <span class="springItemCardHeartNumber">
-                                        0
-                                    </span>
-                                </button>
                             </div>
                         </div>
+                        <!-- </template> -->
+
+                        <!-- Card Izvor 2 -->
+                        <!-- <template id="springListItem"> -->
+                        <div class="col spring-item-card">
+                            <div
+                                class="spring-item-card-inner position-relative">
+                                <img
+                                    src="images/spring.png"
+                                    class="spring-item-card-img springItemCardImg"
+                                    alt="..."/>
+                                <div class="spring-item-card-body">
+                                    <div class="spring-item-card-content">
+                                        <a
+                                            href="#"
+                                            class="stretched-link text-decoration-none link-dark springItemCardLink">
+                                            <h5
+                                                class="spring-title fw-bold springItemCardContentTitle">
+                                                Izvorul Neamțu
+                                            </h5>
+                                        </a>
+                                        <div class="spring-coordinates">
+                                            <div class="springCoordinatesLat">
+                                                46°55'07.7"N
+                                            </div>
+                                            <div class="springCoordinatesLon">
+                                                26°21'06.1"E
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="spring-distance springItemCardContentDistance">
+                                            123 kilometri distanță
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="spring-heart-wrap btn p-1 border-0 rounded-3 btn-outline-light springHeart"
+                                        data-liked="false"
+                                        role="button"
+                                        type="button">
+                                        <img
+                                            class="unliked"
+                                            src="images/heart-symbol.svg"/>
+                                        <img
+                                            class="liked"
+                                            src="images/heart-symbol-liked.svg"/>
+                                        <span class="springItemCardHeartNumber">
+                                            0
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- </template> -->
                     </div>
-                    <!-- </template> -->
                 </div>
             </div>
         </div>
-    </div>
 
-    <!--List of partners-->
+        <!--List of partners-->
 
-    <!-- Aici incepe sectiunea despre cine a facut proiectul si partenerii lui -->
+        <!-- Aici incepe sectiunea despre cine a facut proiectul si partenerii lui -->
 
-    <div class="container">
-        <div class="project-section">
-            <h2 class="unproiect">Un proiect:</h2>
-            <div class="project-logos">
-                <img src="Images/10.png" alt="project_logo_1" class="img-fluid" />
-                <div class="black-bar"></div>
-                <img src="Images/9.png" alt="project_logo_2" class="img-fluid" />
-            </div>
-        </div>
-
-        <div class="partners-section">
-            <h2 class="unproiect-text">În parteneriat cu:</h2>
-            <section class="partners-carousel slider" id="partnersCarousel">
-                <div class="slide">
-                    <img src="Images/1.png" alt="logo" />
-                </div>
-                <div class="slide">
-                    <img src="Images/2.png" alt="logo" />
-                </div>
-                <div class="slide">
-                    <img src="Images/3.png" alt="logo" />
-                </div>
-                <div class="slide">
-                    <img src="Images/4.png" alt="logo" />
-                </div>
-                <div class="slide">
-                    <img src="Images/5.png" alt="logo" />
-                </div>
-                <div class="slide">
-                    <img src="Images/6.png" alt="logo" />
-                </div>
-                <div class="slide">
-                    <img src="Images/7.png" alt="logo" />
-                </div>
-                <div class="slide">
-                    <img src="Images/8.png" alt="logo" />
-                </div>
-            </section>
-        </div>
-    </div>
-
-    <!-- Aici se termina zona despre parteneri si cine a facut proiectul -->
-
-    <!-- Aici incepe zona pentru footer -->
-
-    <footer>
         <div class="container">
-            <div class="footer-wid border-top border-danger pt-4 border-4">
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5">
-                    <div class="col col-md-3 mb-4 text-center logo">
-                        <img src="Images/Logo.svg" />
+            <div class="project-section">
+                <h2 class="unproiect">Un proiect:</h2>
+                <div class="project-logos">
+                    <img
+                        src="images/10.png"
+                        alt="project_logo_1"
+                        class="img-fluid"
+                    />
+                    <div class="black-bar"></div>
+                    <img
+                        src="images/9.png"
+                        alt="project_logo_2"
+                        class="img-fluid"
+                    />
+                </div>
+            </div>
+
+            <div class="partners-section">
+                <h2 class="unproiect-text">În parteneriat cu:</h2>
+                <section class="partners-carousel slider" id="partnersCarousel">
+                    <div class="slide">
+                        <img src="images/1.png" alt="logo" />
                     </div>
-                    <div class="col col-md-3 mb-4 text-center">
-                        <h4 class="h6">Urmărește-ne</h4>
-                        <div class="social-icons">
-                            <a href="#" target="_blank" class="social-icon"><i class="fab fa-instagram fa-2x"></i></a>
-                            <a href="#" target="_blank" class="social-icon"><i class="fab fa-facebook fa-2x"></i></a>
-                            <a href="#" target="_blank" class="social-icon"><i class="fab fa-tiktok fa-2x"></i></a>
+                    <div class="slide">
+                        <img src="images/2.png" alt="logo" />
+                    </div>
+                    <div class="slide">
+                        <img src="images/3.png" alt="logo" />
+                    </div>
+                    <div class="slide">
+                        <img src="images/4.png" alt="logo" />
+                    </div>
+                    <div class="slide">
+                        <img src="images/5.png" alt="logo" />
+                    </div>
+                    <div class="slide">
+                        <img src="images/6.png" alt="logo" />
+                    </div>
+                    <div class="slide">
+                        <img src="images/7.png" alt="logo" />
+                    </div>
+                    <div class="slide">
+                        <img src="images/8.png" alt="logo" />
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Aici se termina zona despre parteneri si cine a facut proiectul -->
+
+        <!-- Aici incepe zona pentru footer -->
+
+        <footer>
+            <div class="container">
+                <div class="footer-wid border-top border-danger pt-4 border-4">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5">
+                        <div class="col col-md-3 mb-4 text-center logo">
+                            <img src="images/Logo.svg" />
+                        </div>
+                        <div class="col col-md-3 mb-4 text-center">
+                            <h4 class="h6">Urmărește-ne</h4>
+                            <div class="social-icons">
+                                <a href="#" target="_blank" class="social-icon"
+                                    ><i class="fab fa-instagram fa-2x"></i
+                                ></a>
+                                <a href="#" target="_blank" class="social-icon"
+                                    ><i class="fab fa-facebook fa-2x"></i
+                                ></a>
+                                <a href="#" target="_blank" class="social-icon"
+                                    ><i class="fab fa-tiktok fa-2x"></i
+                                ></a>
+                            </div>
+                        </div>
+                        <div class="col col-md-3 mb-4 text-center">
+                            <h4 class="h6">Linkuri parteneri</h4>
+                            <ul class="list-unstyled footer-li">
+                                <li><a href="#">Generația Tech</a></li>
+                                <li><a href="#">Digital Nation</a></li>
+                                <li><a href="#">Pentalog</a></li>
+                                <li><a href="#">Primăria Piatră Neamț</a></li>
+                            </ul>
+                        </div>
+                        <div class="col col-md-3 mb-4 text-center">
+                            <h4 class="h6">Linkuri utile</h4>
+                            <ul class="list-unstyled footer-li">
+                                <li><a href="#">Termeni și condiții</a></li>
+                                <li><a href="#">Politică de cookies</a></li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="col col-md-3 mb-4 text-center">
-                        <h4 class="h6">Linkuri parteneri</h4>
-                        <ul class="list-unstyled footer-li">
-                            <li><a href="#">Generația Tech</a></li>
-                            <li><a href="#">Digital Nation</a></li>
-                            <li><a href="#">Pentalog</a></li>
-                            <li><a href="#">Primăria Piatră Neamț</a></li>
-                        </ul>
-                    </div>
-                    <div class="col col-md-3 mb-4 text-center">
-                        <h4 class="h6">Linkuri utile</h4>
-                        <ul class="list-unstyled footer-li">
-                            <li><a href="#">Termeni și condiții</a></li>
-                            <li><a href="#">Politică de cookies</a></li>
-                        </ul>
-                    </div>
                 </div>
             </div>
-        </div>
-        <div class="footer-mobile-mountains d-block d-md-none"></div>
-        <div class="copyright text-center py-3">
-            © <span class="current-year" id="currentYear">2024</span> Where
-            IsVor. Toate drepturile rezervate.
-        </div>
-    </footer>
+            <div class="footer-mobile-mountains d-block d-md-none"></div>
+            <div class="copyright text-center py-3">
+                © <span class="current-year" id="currentYear">2024</span> Where
+                IsVor. Toate drepturile rezervate.
+            </div>
+        </footer>
 
-    <!-- Aici se termina footer-ul -->
+        <!-- Aici se termina footer-ul -->
 
-    <!-- Fisiere JS externe. Jquery, Slick, Font Awesome, etc. -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <script src="https://kit.fontawesome.com/ff67e41739.js" crossorigin="anonymous"></script>
-    <script src="slick.js"></script>
-</body>
-
+        <!-- Fisiere JS externe. Jquery, Slick, Font Awesome, etc. -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+        <script
+            src="https://kit.fontawesome.com/ff67e41739.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="slick.js"></script>
+    </body>
 </html>

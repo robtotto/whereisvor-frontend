@@ -12162,3 +12162,69 @@ body {
   background-color: #efefef;
   overflow-x: hidden;
 }
+
+.spring-heart-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ff6161;
+  font-weight: bold;
+  position: relative;
+  z-index: 5;
+}
+.spring-heart-wrap img {
+  width: 37px;
+  height: 40px;
+}
+.spring-heart-wrap img.liked {
+  display: none;
+}
+.spring-heart-wrap img.unliked {
+  display: block;
+}
+.spring-heart-wrap[data-liked=true] img.liked {
+  display: block;
+}
+.spring-heart-wrap[data-liked=true] img.unliked {
+  display: none;
+}
+.spring-heart-wrap.spring-heart-horizontal {
+  flex-direction: row;
+}
+.spring-heart-wrap.spring-heart-horizontal img {
+  margin-right: 5px;
+}
+
+.map-responsive {
+  overflow: hidden;
+  position: relative;
+}
+.map-responsive #map {
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70vh;
+  min-height: 400px;
+}
+.map-responsive #marker {
+  background-color: #ff6161;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.map-responsive .mapboxgl-popup {
+  max-width: 300px;
+}
+.map-responsive .mapboxgl-popup .spring-map-marker-popup {
+  padding: 10px 5px 0 5px;
+}
+.map-responsive .mapboxgl-popup .spring-map-marker-popup a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.map-responsive .mapboxgl-popup .spring-map-marker-popup a img {
+  width: auto;
+  height: 0.8rem;
+}

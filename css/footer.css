@@ -1,5 +1,5 @@
 :root {
-  font-family: "Open Sans", sans-serif !important;
+  font-family: "Open Sans", sans-serif;
 }
 
 .copyright {
@@ -136,7 +136,7 @@
 } */
 @media (min-width: 768px) {
   .footer-wid {
-    background-image: url(../Images/Mountain_george.svg);
+    background-image: url(../images/Mountain_george.svg);
     background-repeat: no-repeat;
     background-size: 40% auto;
     background-position: 100% 100%;
@@ -148,7 +148,7 @@
 }
 @media (min-width: 992px) {
   .footer-wid {
-    background-image: url(../Images/Mountain_george.svg);
+    background-image: url(../images/Mountain_george.svg);
     background-repeat: no-repeat;
     background-size: 40% auto;
     background-position: 100% 100%;
@@ -158,7 +158,7 @@
   }
 }
 .footer-mobile-mountains {
-  background-image: url(../Images/Mountain_george.svg);
+  background-image: url(../images/Mountain_george.svg);
   background-repeat: no-repeat;
   background-size: contain;
   aspect-ratio: 475/237;

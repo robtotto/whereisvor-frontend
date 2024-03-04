@@ -1,0 +1,61 @@
+@import "variables";
+
+.hr-danger {
+    height: 2px;
+    background-color: $danger;
+}
+
+hr {
+    margin: 0;
+}
+
+.spring-item-content {
+    margin-bottom: 20px;
+}
+
+.spring-item-content-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.spring-item-content-coordinates {
+    margin-bottom: 20px;
+}
+
+.img-coordinates {
+    margin-right: 10px;
+}
+
+.spring-description {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.spring-item-content-share {
+    padding-top: 20px;
+}
+
+.spring-share-text {
+    margin-right: 20px;
+}
+
+.icon {
+    margin-right: 2px;
+}
+
+.spring-img-wrap {
+    margin-bottom: 20px;
+}
+
+.spring-img {
+    width: 100%;
+    // height: 100%;
+    // object-fit: cover;
+    // object-position: center;
+}
+
+.map-responsive {
+    border-radius: 10px;
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.15);
+}
