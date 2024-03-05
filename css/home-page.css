@@ -8,23 +8,29 @@ body {
 
 .home-img-container {
   aspect-ratio: 1;
-  background-image: url(../images/ceeste.png);
+  background-image: url(../Images/ceeste.png);
   background-size: cover;
   background-repeat: no-repeat;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 .home-img-container2 {
   aspect-ratio: 1;
-  background-image: url(../images/povesteaplatformei.png);
+  background-image: url(../Images/povesteaplatformei.png);
   background-size: cover;
   background-repeat: no-repeat;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 .home-img-container3 {
   aspect-ratio: 1;
-  background-image: url(../images/misiuneaplatformei.png);
+  background-image: url(../Images/misiuneaplatformei.png);
   background-size: cover;
   background-repeat: no-repeat;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 .home-detail {
@@ -69,7 +75,7 @@ body {
   left: 15%;
   width: 60%;
   height: 120%;
-  background-image: url("../images/bifa.svg");
+  background-image: url("../Images/bifa.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -123,7 +129,7 @@ li {
 }
 
 .hero-container {
-  background-image: url(../images/Mountain_george.svg);
+  background-image: url(../Images/Mountain_george.svg);
   background-position: right bottom;
   background-size: contain;
   height: 100vh;
@@ -163,6 +169,12 @@ li {
   background-color: #d4d4d4;
 }
 
+@media (max-width: 575.98px) {
+  .DeCeBeauApa {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}
 @media screen and (max-width: 576px) {
   .centered-heading {
     font-size: 4rem;
@@ -199,7 +211,7 @@ li {
   .home-img-container {
     border-radius: 1rem;
     aspect-ratio: 3/4;
-    background-image: url(../images/ceeste.png);
+    background-image: url(../Images/ceeste.png);
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -210,7 +222,7 @@ li {
   .home-img-container2 {
     border-radius: 1rem;
     aspect-ratio: 3/4;
-    background-image: url(../images/povesteaplatformei.png);
+    background-image: url(../Images/povesteaplatformei.png);
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -221,7 +233,7 @@ li {
   .home-img-container3 {
     border-radius: 1rem;
     aspect-ratio: 3/4;
-    background-image: url(../images/misiuneaplatformei.png);
+    background-image: url(../Images/misiuneaplatformei.png);
     background-size: cover;
     background-repeat: no-repeat;
   }
