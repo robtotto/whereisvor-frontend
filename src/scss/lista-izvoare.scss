@@ -71,6 +71,10 @@
         color: $danger;
     }
 
+    .springHeart:active {
+        color: $danger;
+    }
+
     .spring-item-card-inner:hover {
         box-shadow: 1px 8px 20px grey;
         -webkit-transition: box-shadow 0.6s ease-in;

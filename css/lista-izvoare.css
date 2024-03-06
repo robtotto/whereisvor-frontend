@@ -60,6 +60,9 @@
 .spring-item-card .springHeart {
   color: #ff6161;
 }
+.spring-item-card .springHeart:active {
+  color: #ff6161;
+}
 .spring-item-card .spring-item-card-inner:hover {
   box-shadow: 1px 8px 20px grey;
   -webkit-transition: box-shadow 0.6s ease-in;

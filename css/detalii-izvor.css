@@ -21,6 +21,10 @@ hr {
   margin-bottom: 20px;
 }
 
+.springHeart:active {
+  color: #ff6161;
+}
+
 .spring-item-content-coordinates {
   margin-bottom: 20px;
 }
