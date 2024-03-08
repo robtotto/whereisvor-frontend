@@ -4,18 +4,30 @@ body {
     background-color: $secondary;
 }
 
-.contact-form_section {
+.contact-form-section {
     border-radius: 10px;
     background-color: $secondary-emphasis;
     overflow: hidden;
 }
 
-.contact-form_image {
+.contact-form-image {
     background-image: url("../images/harta-contact.svg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.contact-form-mailchimp {
+    width: auto;
+    height: 770px;
+    overflow: hidden;
+}
+
+.contact-form-mailchimp-url {
+    width: 50vh;
+    height: 900px;
+}
+
 
 .form-send {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
@@ -119,8 +131,13 @@ body {
 }
 
 @media (max-width: 992px) {
-    .contact-form_image {
+    .contact-form-image {
         display: none;
+    }
+    
+    .contact-form-mailchimp-url {
+        width: 50vh;
+        height: 900px;
     }
 
     .team-webdesign {
@@ -154,5 +171,24 @@ body {
 
     .slick_arrow_GT.next {
         right: 5px;
+    }
+
+    .contact-form-mailchimp {
+        width: auto;
+        height: 770px;
+        overflow: hidden;
+    }
+    
+    .contact-form-mailchimp-url {
+        width: 40vh;
+        height: 900px;
+    }
+}
+
+@media (max-width:320px) {
+    
+    .contact-form-mailchimp-url {
+        width: 30vh;
+        height: 700px;
     }
 }
