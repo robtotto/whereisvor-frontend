@@ -53,7 +53,7 @@
             right: 0;
         }
 
-        .home-detail>* {
+        .home-detail > * {
             position: relative;
             z-index: 2;
         }
@@ -207,10 +207,6 @@
 
         }
 
-        .mobile-only {
-            display: none; /* Hide by default */
-        }
-
         @media only screen and (max-width: 768px) {
             .mobile-only {
                 display: block; /* Display on mobile devices */
@@ -343,4 +339,28 @@
         .spatiu {
             padding-top: 65px;
             padding-bottom: 65px;
+        }
+        
+        .paddings1 {
+            padding-top: 60px;
+            padding-bottom: 25px;
+            font-size: 2rem;
+        }
+
+        .paddings1_1 {
+            padding-bottom: 25px;
+            font-size: 1rem;
+        }
+
+        .paddings1_2 {
+            padding-top: 2.5rem;
+            padding-bottom: 1rem;
+            font-size: 2rem;
+
+        }
+
+        .paddings1_1_2 {
+            padding-bottom: 1.1rem;
+            font-size: 2rem;
+
         }
