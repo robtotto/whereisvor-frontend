@@ -195,14 +195,6 @@ li {
     margin-top: 1.1rem;
   }
 }
-@media only screen and (max-width: 768px) {
-  .mobile-only {
-    display: block; /* Display on mobile devices */
-  }
-  .normal-res {
-    display: none;
-  }
-}
 @media screen and (max-width: 992px) {
   .centered-heading {
     font-size: 6.5rem;
@@ -328,4 +320,26 @@ li {
 .paddings1_1_2 {
   padding-bottom: 1.1rem;
   font-size: 2rem;
+}
+
+.normal-res {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .normal-res {
+    display: none;
+  }
+  .mobile-only {
+    display: block;
+  }
+}
+@media (min-width: 2000px) {
+  .despre-noi-text {
+    margin-left: 115px;
+  }
 }
