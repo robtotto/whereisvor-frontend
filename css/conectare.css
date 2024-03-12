@@ -1,0 +1,12 @@
+:root {
+  font-family: "Open Sans", sans-serif;
+}
+
+.button-login {
+  width: 234px;
+}
+
+.login-form {
+  width: 510px;
+  height: 600px;
+}
