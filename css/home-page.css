@@ -311,17 +311,6 @@ li {
   font-size: 1rem;
 }
 
-.paddings1_2 {
-  padding-top: 2.5rem;
-  padding-bottom: 1rem;
-  font-size: 2rem;
-}
-
-.paddings1_1_2 {
-  padding-bottom: 1.1rem;
-  font-size: 2rem;
-}
-
 .normal-res {
   display: block;
 }
