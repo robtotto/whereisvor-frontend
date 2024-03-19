@@ -1,0 +1,125 @@
+@import "variables";
+
+.izvoare-tabs {
+    .nav-item button {
+        &:hover {
+            background-color: $success;
+            border-color: $success;
+        }
+
+        &.active {
+            display: none;
+        }
+    }
+}
+
+.izvoare-tabs {
+    padding-top: 12px;
+    padding-bottom: 20px;
+}
+
+.spring-item-card {
+    .spring-item-card-inner {
+        background-color: #fff;
+        border-radius: 1.5rem;
+        overflow: hidden;
+
+        box-shadow: 0px 0px 0px grey;
+        -webkit-transition: box-shadow 0.6s ease-out;
+        box-shadow: 0.8px 0.9px 3px grey;
+
+        .spring-item-card-img {
+            max-width: 100%;
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .spring-item-card-body {
+            display: flex;
+            align-items: end;
+            // gap: 1rem;
+            justify-content: space-between;
+            padding: 1rem;
+
+            .spring-title {
+                -webkit-line-clamp: 2;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                height: 2.4em;
+            }
+
+            .spring-coordinates {
+                -webkit-line-clamp: 2;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                height: 2.9em;
+                margin-bottom: 0.5rem;
+                opacity: 0.6;
+            }
+
+            .spring-distance {
+                opacity: 0.6;
+            }
+        }
+    }
+
+    .springHeart {
+        color: $danger;
+    }
+
+    .springHeart:active {
+        color: $danger;
+    }
+
+    .spring-item-card-inner:hover {
+        box-shadow: 1px 8px 20px grey;
+        -webkit-transition: box-shadow 0.6s ease-in;
+    }
+
+    &.spring-item-card-horizontal {
+        .spring-item-card-inner {
+            display: flex;
+
+            .spring-item-card-img {
+                width: 170px;
+                max-width: 30vw;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .spring-item-card-inner {
+                .spring-item-card-body {
+                    gap: 0.5rem;
+                    padding: 0.5rem;
+                }
+            }
+            .spring-heart-wrap {
+                img {
+                    width: 29.6px !important;
+                    height: 32px !important;
+                }
+                span {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+
+    &.spring-item-card-map {
+        position: absolute;
+        z-index: 2;
+        width: 500px;
+        max-width: calc(100% - 24px);
+        bottom: 24px;
+        transform: translateX(-50%) !important;
+        left: 50% !important;
+    }
+}
+
+.map-responsive {
+    border: solid 2px $danger;
+}

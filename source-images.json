@@ -1,0 +1,31 @@
+[
+    {
+      "title": "baraj",
+      "path": "source-images/baraj.jpg"
+    },
+    {
+      "title": "cut",
+      "path": "source-images/cut.jpg"
+    },
+    {
+      "title": "neamtu",
+      "path": "source-images/neamtu.jpg"
+    },
+    {
+        "title": "doamna",
+        "path": "source-images/doamna.jpg"
+      },
+      {
+        "title": "gabor",
+        "path": "source-images/gabor.jpg"
+      },
+      {
+        "title": "bacioaia",
+        "path": "source-images/bacioaia.jpg"
+      },
+      {
+        "title": "slatina",
+        "path": "source-images/slatina.jpg"
+      }    
+  ]
+  

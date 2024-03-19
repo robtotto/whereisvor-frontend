@@ -1,0 +1,197 @@
+@import "variables";
+
+.copyright {
+    background-color: $light-emphasis;
+}
+
+.partners-container {
+    padding-bottom: 15px;
+    width: 100%;
+}
+
+.project-section {
+    text-align: center;
+    // padding-bottom: 30px;
+}
+
+.project-section h2 {
+    font-size: 24px;
+    color: $dark;
+    margin: 0;
+}
+
+.unproiect {
+    padding-bottom: 40px;
+    padding-top: 60px;
+}
+
+.unproiect-text {
+    padding-bottom: 40px;
+}
+
+.project-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.project-logos img {
+    width: 120px;
+    margin: 0 5px;
+}
+
+.project-logos img:not(:last-child) {
+    margin-right: 5px;
+}
+
+.project-logos .black-bar {
+    height: 30px;
+    width: 2px;
+    background-color: $dark;
+    margin: 0 5px;
+}
+
+.partners-section {
+    text-align: center;
+    /* margin-bottom: 20px; */
+}
+
+.partners-section h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+}
+
+.partners-section .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.partners-section .slick-slide img {
+    width: 60%;
+    margin: 0 20px;
+}
+
+.partners-section .slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+.partners-section .slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.partners-section .slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+.partners-section .slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+
+.partners-section .slick-slide img {
+    display: block;
+}
+
+.partners-section .slick-initialized .slick-slide {
+    display: block;
+}
+
+.partners-section .slick-prev:before,
+.partners-section .slick-next:before {
+    color: $dark;
+    font-size: 25px;
+}
+
+.partners-section .slick-prev {
+    left: 0;
+}
+
+.partners-section .slick-next {
+    right: 0;
+}
+
+/* .footer-wid {
+    background-image: url(11.svg);
+    background-repeat: no-repeat;
+    background-size: 60% auto;
+    background-position: 100% 100%;
+} */
+
+@media (min-width: 768px) {
+    .footer-wid {
+        background-image: url(../images/Mountain_george.svg);
+        background-repeat: no-repeat;
+        background-size: 40% auto;
+        background-position: 100% 100%;
+        padding-bottom: 60px;
+    }
+
+    .logo {
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .footer-wid {
+        background-image: url(../images/Mountain_george.svg);
+        background-repeat: no-repeat;
+        background-size: 40% auto;
+        background-position: 100% 100%;
+    }
+
+    .logo {
+        margin-top: 15px;
+    }
+}
+
+.footer-mobile-mountains {
+    background-image: url(../images/Mountain_george.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    aspect-ratio: 475/237;
+    background-position: 100% 100%;
+}
+
+.footer-li {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.footer-li a {
+    color: $dark;
+    text-decoration: none;
+}
+
+footer h4 {
+    border-bottom: 2px solid $primary;
+    display: inline-block;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icon {
+    margin-right: 8px;
+    color: #292929;
+}

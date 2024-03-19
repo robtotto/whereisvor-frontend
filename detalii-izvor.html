@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ro-RO">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Detalii izvoare - Where IsVor</title>
+        <!-- Fisiere de CSS externe. Styles, Slick, etc. -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+            integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/nav-bar.css" />
+        <link rel="stylesheet" href="css/detalii-izvor.css" />
+        <link rel="stylesheet" href="css/footer.css" />
+        <link rel="icon" type="image/x-icon" href="images/faviconn.ico">
+
+        <!-- MAPBOX -->
+        <link href="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css" rel="stylesheet" />
+        <script src="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.js"></script>
+        <!-- JavaScript-->
+        <script type="module" src="./js/single-spring.js"></script>
+    </head>
+
+    <body>
+        <!--Navbar-->
+
+        <!-- Aici incepe navbar-ul -->
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a
+                    class="navbar-brand mx-lg-5 d-block d-lg-none"
+                    href="index.html">
+                    <img src="images/logo-navbar.svg" />
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                    class="collapse navbar-collapse justify-content-lg-center"
+                    id="navbarNav">
+                    <ul
+                        class="navbar-nav nav-menu-left justify-content-lg-end gap-lg-5">
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                aria-current="page"
+                                href="index.html"
+                                >Acasă</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="lista-izvoare.html"
+                                >Izvoare</a>
+                        </li>
+                    </ul>
+
+                    <a
+                        class="navbar-brand mx-lg-5 d-none d-lg-block"
+                        href="index.html">
+                        <img src="images/logo-navbar.svg" />
+                    </a>
+
+                    <ul class="navbar-nav nav-menu-right gap-lg-5">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#DespreNoi">Despre noi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Aici incepe pagina individuala a izvorului -->
+
+        <div class="container mt-4">
+            <section class="spring-item" id="springListItem">
+                <div class="spring-item-card-body">
+                    <div class="row">
+                        <div class="col-xl-6 spring-item-content">
+                            <div
+                                class="spring-item-content-title align-items-start">
+                                <h1 class="spring-title fw-bold h2 springTitle">
+                                    Izvor Baraj
+                                </h1>
+                                <button
+                                    class="spring-heart-wrap spring-heart-horizontal btn p-1 border-0 rounded-3 btn-outline-light springHeart"
+                                    data-liked="false"
+                                    role="button"
+                                    type="button">
+                                    <img
+                                        class="unliked"
+                                        src="images/heart-symbol.svg"/>
+                                    <img
+                                        class="liked"
+                                        src="images/heart-symbol-liked.svg"/>
+                                    <span
+                                        class="spring-heart-number text-danger springItemCardHeartNumber"
+                                        >0</span>
+                                </button>
+                            </div>
+                            <div class="spring-item-content-coordinates">
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    rel="nofollow"
+                                    class="link-dark text-decoration-none d-flex align-items-center springCoordinatesLink"
+                                    ><img
+                                        class="img-coordinates"
+                                        src="images/coordinates.svg"/>
+                                    <span class="spring-coordinates fw-bold">
+                                        <span class="springCoordinatesLat">
+                                            46°55'07.7"N
+                                        </span>
+                                        <span class="springCoordinatesLon">
+                                            26°21'06.1"E
+                                        </span>
+                                    </span></a>
+                            </div>
+                            <div class="springDescriptionWrap">
+                                <div class="hr-danger"><hr /></div>
+                                <div
+                                    class="spring-description springDescription">
+                                    Izvorul este situat pe Aleea Tineretului, în
+                                    apropierea barajului. Este cel mai apropiat
+                                    izvor de oraș și, probabil, cel mai
+                                    frecventat de către cetățeni. În ciuda
+                                    lucrărilor de renovare care i-ar mai fi
+                                    necesare, apa de aici este căutată de mulți
+                                    dintre oamenii orașului. Izvorul este situat
+                                    pe Aleea Tineretului, în apropierea
+                                    barajului. Este cel mai apropiat izvor de
+                                    oraș și, probabil, cel mai frecventat de
+                                    către cetățeni. În ciuda lucrărilor de
+                                    renovare care i-ar mai fi necesare, apa de
+                                    aici este căutată de mulți dintre oamenii
+                                    orașului. Izvorul este situat pe Aleea
+                                    Tineretului, în apropierea barajului. Este
+                                    cel mai apropiat izvor de oraș și, probabil,
+                                    cel mai frecventat de către cetățeni. În
+                                    ciuda lucrărilor de renovare care i-ar mai
+                                    fi necesare, apa de aici este căutată de
+                                    mulți dintre oamenii orașului.
+                                </div>
+                            </div>
+                            <div class="hr-danger"><hr /></div>
+                            <div
+                                class="spring-item-content-share d-flex flex-wrap align-items-center">
+                                <span class="spring-share-text"
+                                    >Distribuie:</span>
+                                <!-- AddToAny BEGIN -->
+                                <div
+                                    class="a2a_kit a2a_kit_size_32 a2a_default_style springShare"
+                                    data-a2a-url="#"
+                                    data-a2a-title="Titlu Izvor">
+                                    <a class="a2a_button_facebook"></a>
+                                    <a
+                                        class="a2a_button_facebook_messenger"></a>
+                                    <a class="a2a_button_whatsapp"></a>
+                                    <a class="a2a_button_telegram"></a>
+                                    <a class="a2a_button_copy_link"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-6 spring-img-wrap">
+                            <img
+                                class="spring-img rounded springImg"
+                                src="images/izvor-baraj.png"
+                                alt=""/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <!-- Card nou pin-harta -->
+                    <template id="springMapMarkerPopup">
+                        <div class="spring-map-marker-popup text-center">
+                            <div>
+                                <div class="fw-bold h6 mb-3 springTitle">
+                                    Izvorul Slatina Gârcina
+                                </div>
+                            </div>
+                            <a
+                                href="#"
+                                target="_blank"
+                                rel="nofollow"
+                                class="btn btn-success rounded-pill btn-sm px-3 springCoordinatesLink">
+                                <b>Construiește traseu</b>
+                                <img src="images/arrow-pin-card.svg" />
+                            </a>
+                        </div>
+                    </template>
+                    <div class="map-responsive map">
+                        <div id="map"></div>
+                        <script>
+                            // TO MAKE THE MAP APPEAR YOU MUST
+                            // ADD YOUR ACCESS TOKEN FROM
+                            // https://account.mapbox.com
+                            mapboxgl.accessToken =
+                                "pk.eyJ1IjoiZG1pdHJpZ29yb2JpY2RpZ2l0YWxuYXRpb24iLCJhIjoiY2x0ZGJobHozMDQ3NDJycGJlcGxtank1YiJ9.TPkkgQWM0pr4iIRU0dG0yg";
+                            const spring = [-77.0353, 38.8895];
+                            const map = new mapboxgl.Map({
+                                container: "map",
+                                // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+                                style: "mapbox://styles/mapbox/streets-v12",
+                                center: spring,
+                                zoom: 10,
+                                cooperativeGestures: true,
+                            });
+
+                            let popupContent = document.getElementById(
+                                "springMapMarkerPopup"
+                            );
+
+                            // create the popup
+                            const popup = new mapboxgl.Popup({
+                                closeOnClick: false,
+                                offset: 7,
+                            }).setHTML(popupContent.innerHTML);
+
+                            // create DOM element for the marker
+                            const el = document.createElement("div");
+                            el.id = "marker";
+
+                            // create the marker
+                            new mapboxgl.Marker(el)
+                                .setLngLat(spring)
+                                .setPopup(popup) // sets a popup on this marker
+                                .addTo(map);
+                        </script>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Aici se sfarseste pagina individuala a izvorului -->
+
+        <!--List of partners-->
+        <!-- Aici incepe sectiunea despre cine a facut proiectul si partenerii lui -->
+
+        <div class="container">
+            <div class="project-section">
+                <h2 class="unproiect">Un proiect:</h2>
+                <div class="project-logos">
+                    <img
+                        src="images/10.png"
+                        alt="project_logo_1"
+                        class="img-fluid"
+                    />
+                    <div class="black-bar"></div>
+                    <img
+                        src="images/9.png"
+                        alt="project_logo_2"
+                        class="img-fluid"
+                    />
+                </div>
+            </div>
+
+            <div class="partners-section">
+                <h2 class="unproiect-text">În parteneriat cu:</h2>
+                <section class="partners-carousel slider" id="partnersCarousel">
+                    <div class="slide"><a href="https://eviden.com/" target="_blank"><img src="images/1.png" alt="logo"></a>
+                    </div>
+                    <div class="slide"><a href="https://www.siemens.com/ro/ro.html" target="_blank"><img src="images/2.png"
+                                alt="logo"></a></div>
+                    <div class="slide"><a href="https://www.pentalog.com/" target="_blank"><img src="images/3.png"
+                                alt="logo"></a></div>
+                    <div class="slide"><a href="https://www.brasovcity.ro/" target="_blank"><img src="images/4.png"
+                                alt="logo"></a></div>
+                    <div class="slide"><a href="https://www.metropolabrasov.ro/" target="_blank"><img src="images/5.png"
+                                alt="logo"></a></div>
+                    <div class="slide"><a href="https://www.bearingpoint.com/en/" target="_blank"><img src="images/6.png"
+                                alt="logo"></a></div>
+                    <div class="slide"><a href="https://bepco.ro/" target="_blank"><img src="images/7.png" alt="logo"></a>
+                    </div>
+                    <div class="slide"><a href="https://www.kronsoft.ro/" target="_blank"><img src="images/8.png"
+                                alt="logo"></a></div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Aici se termina zona despre parteneri si cine a facut proiectul -->
+
+        <!-- Aici incepe zona pentru footer -->
+
+        <footer>
+            <div class="container">
+                <div class="footer-wid border-top border-danger pt-4 border-4">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5">
+                        <div class="col col-md-3 mb-4 text-center logo">
+                            <a href="index.html"><img src="images/Logo.svg" /></a>
+                        </div>
+                        <div class="col col-md-3 mb-4 text-center">
+                            <h4 class="h6">Urmărește-ne</h4>
+                            <div class="social-icons">
+                                <a href="#" target="_blank" class="social-icon"
+                                    ><i class="fab fa-instagram fa-2x"></i
+                                ></a>
+                                <a href="#" target="_blank" class="social-icon"
+                                    ><i class="fab fa-facebook fa-2x"></i
+                                ></a>
+                                <a href="#" target="_blank" class="social-icon"
+                                    ><i class="fab fa-tiktok fa-2x"></i
+                                ></a>
+                            </div>
+                        </div>
+                        <div class="col col-md-3 mb-4 text-center">
+                            <h4 class="h6">Linkuri parteneri</h4>
+                            <ul class="list-unstyled footer-li">
+                                <li><a href="#">Generația Tech</a></li>
+                                <li><a href="#">Digital Nation</a></li>
+                                <li><a href="#">Pentalog</a></li>
+                                <li><a href="#">Primăria Piatră Neamț</a></li>
+                            </ul>
+                        </div>
+                        <div class="col col-md-3 mb-4 text-center">
+                            <h4 class="h6">Linkuri utile</h4>
+                            <ul class="list-unstyled footer-li">
+                                <li><a href="#">Termeni și condiții</a></li>
+                                <li><a href="/Link-uri Utile/cookies.html">Politică de cookies</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-mobile-mountains d-block d-md-none"></div>
+            <div class="copyright text-center py-3">
+                © <span class="current-year" id="currentYear">2024</span> Where
+                IsVor. Toate drepturile rezervate.
+            </div>
+        </footer>
+
+        <!-- Aici se termina footer-ul -->
+
+        <!-- Fisiere JS externe. Jquery, Slick, Font Awesome, etc. -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+        <script
+            src="https://kit.fontawesome.com/ff67e41739.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="./js/slick.js"></script>
+        <script>
+            var a2a_config = a2a_config || {};
+            a2a_config.locale = "ro";
+            a2a_config.num_services = 8;
+            a2a_config.icon_color = "#efefef,black";
+        </script>
+        <script async src="https://static.addtoany.com/menu/page.js"></script>
+        <!-- AddToAny END -->
+        
+    <!-- Google tag (gtag.js) -->
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S80JG98V1Y"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-S80JG98V1Y');
+    </script>
+    </body>
+</html>
