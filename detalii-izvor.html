@@ -98,7 +98,7 @@
                             <div
                                 class="spring-item-content-title align-items-start">
                                 <h1 class="spring-title fw-bold h2 springTitle">
-                                    Izvor Baraj
+                                   
                                 </h1>
                                 <button
                                     class="spring-heart-wrap spring-heart-horizontal btn p-1 border-0 rounded-3 btn-outline-light springHeart"
@@ -113,7 +113,7 @@
                                         src="images/heart-symbol-liked.svg"/>
                                     <span
                                         class="spring-heart-number text-danger springItemCardHeartNumber"
-                                        >0</span>
+                                        ></span>
                                 </button>
                             </div>
                             <div class="spring-item-content-coordinates">
@@ -127,37 +127,17 @@
                                         src="images/coordinates.svg"/>
                                     <span class="spring-coordinates fw-bold">
                                         <span class="springCoordinatesLat">
-                                            46°55'07.7"N
+                                           
                                         </span>
                                         <span class="springCoordinatesLon">
-                                            26°21'06.1"E
+                                           
                                         </span>
                                     </span></a>
                             </div>
                             <div class="springDescriptionWrap">
                                 <div class="hr-danger"><hr /></div>
                                 <div
-                                    class="spring-description springDescription">
-                                    Izvorul este situat pe Aleea Tineretului, în
-                                    apropierea barajului. Este cel mai apropiat
-                                    izvor de oraș și, probabil, cel mai
-                                    frecventat de către cetățeni. În ciuda
-                                    lucrărilor de renovare care i-ar mai fi
-                                    necesare, apa de aici este căutată de mulți
-                                    dintre oamenii orașului. Izvorul este situat
-                                    pe Aleea Tineretului, în apropierea
-                                    barajului. Este cel mai apropiat izvor de
-                                    oraș și, probabil, cel mai frecventat de
-                                    către cetățeni. În ciuda lucrărilor de
-                                    renovare care i-ar mai fi necesare, apa de
-                                    aici este căutată de mulți dintre oamenii
-                                    orașului. Izvorul este situat pe Aleea
-                                    Tineretului, în apropierea barajului. Este
-                                    cel mai apropiat izvor de oraș și, probabil,
-                                    cel mai frecventat de către cetățeni. În
-                                    ciuda lucrărilor de renovare care i-ar mai
-                                    fi necesare, apa de aici este căutată de
-                                    mulți dintre oamenii orașului.
+                                    class="spring-description springDescription">                                   
                                 </div>
                             </div>
                             <div class="hr-danger"><hr /></div>
@@ -195,7 +175,6 @@
                         <div class="spring-map-marker-popup text-center">
                             <div>
                                 <div class="fw-bold h6 mb-3 springTitle">
-                                    Izvorul Slatina Gârcina
                                 </div>
                             </div>
                             <a
@@ -209,43 +188,7 @@
                         </div>
                     </template>
                     <div class="map-responsive map">
-                        <div id="map"></div>
-                        <script>
-                            // TO MAKE THE MAP APPEAR YOU MUST
-                            // ADD YOUR ACCESS TOKEN FROM
-                            // https://account.mapbox.com
-                            mapboxgl.accessToken =
-                                "pk.eyJ1IjoiZG1pdHJpZ29yb2JpY2RpZ2l0YWxuYXRpb24iLCJhIjoiY2x0ZGJobHozMDQ3NDJycGJlcGxtank1YiJ9.TPkkgQWM0pr4iIRU0dG0yg";
-                            const spring = [-77.0353, 38.8895];
-                            const map = new mapboxgl.Map({
-                                container: "map",
-                                // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
-                                style: "mapbox://styles/mapbox/streets-v12",
-                                center: spring,
-                                zoom: 10,
-                                cooperativeGestures: true,
-                            });
-
-                            let popupContent = document.getElementById(
-                                "springMapMarkerPopup"
-                            );
-
-                            // create the popup
-                            const popup = new mapboxgl.Popup({
-                                closeOnClick: false,
-                                offset: 7,
-                            }).setHTML(popupContent.innerHTML);
-
-                            // create DOM element for the marker
-                            const el = document.createElement("div");
-                            el.id = "marker";
-
-                            // create the marker
-                            new mapboxgl.Marker(el)
-                                .setLngLat(spring)
-                                .setPopup(popup) // sets a popup on this marker
-                                .addTo(map);
-                        </script>
+                        <div id="map"></div>                                               
                     </div>
                 </div>
             </section>
